@@ -76,3 +76,25 @@ Run `npm install @vercel/postgres` for vercel
 
 Run `npm install --save-dev nodemon`
 
+# Install react bootstrap
+
+Run `npm install react-bootstrap bootstrap`
+`npm i bootstrap`
+
+# Install next.js codemod link update
+
+Run `npx @next/codemod new-link`
+
+# Install NextUI library 
+
+Run `npm i @nextui-org/react`
+
+
+Librairies?
+Components?
+styling CSS 4 options
+
+
+
+
+

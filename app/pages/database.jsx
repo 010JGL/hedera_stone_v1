@@ -1,7 +1,7 @@
 import { sql } from "@vercel/postgres";
 
 
-export default async function Cart({ params }) {
+export default async function Database({ params }) {
   const { rows } = await sql`SELECT * from users;`;
 
   const { nfts } = await sql`DROP TABLE IF EXISTS nfts CASCADE;
