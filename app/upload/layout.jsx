@@ -1,7 +1,7 @@
 
 'use client'
 
-import NavbarUp from '../components/navbar_upload/NavbarUp';
+import NavbarUp from "../components/navbar_upload/NavbarUp";
 
 export default function UpLayout ({ children }){
   return (

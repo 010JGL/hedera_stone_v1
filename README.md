@@ -85,13 +85,9 @@ Run `npm install react-bootstrap bootstrap`
 
 Run `npx @next/codemod new-link`
 
-# Install NextUI library 
-
-Run `npm i @nextui-org/react`
-
 
 Librairies?
-Components?
+Components? M UI, carbon by ibm, 
 styling CSS 4 options
 
 
