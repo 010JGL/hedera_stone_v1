@@ -1,7 +1,7 @@
 export default function Collection() {
   return (
    <main>
-    <h1 classname="title">Your Collection</h1>
+    <h1 className="title">Your Collection</h1>
     
    </main>
   )

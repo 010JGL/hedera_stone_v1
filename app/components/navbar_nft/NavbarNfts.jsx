@@ -2,26 +2,45 @@
 
 import React, { useState } from "react";
 
+import Image from "next/image";
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+
+import logo from "../../../public/images/logo.png";
+import name from "../../../public/images/name.png";
+import under_name from "../../../public/images/under-name.png";
+import layer1 from "../../../public/images/Layer_1.png";
 
 const NavbarNfts = () => {
   return (
     <>
-    <Navbar bg="primary" variant="light">
-      <Container>
-        <Navbar.Brand href="#home">Logo</Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/nfts/gallery">Gallery</Nav.Link>
-          <Nav.Link href="/nfts/collection">Collection</Nav.Link>
-          <Nav.Link href="/nfts/search">Search</Nav.Link>
-          <Nav.Link href="">Connect wallet option</Nav.Link>
-        </Nav>
-      </Container>
-    </Navbar>
+      <Navbar className="navbar" variant="dark">
+        <Container>
+          <Navbar.Brand href="/">
+            <div className="nav-logo">
+              <Image src={logo} alt="HederaStone Logo" />
+            </div>
+          </Navbar.Brand>
+          <div className="nav-title">
+            <Image src={name} alt="HederaStone" />
+            <Image src={under_name} alt="The Family Tree of the Future" />
+          </div>
+
+          <div className="nav-links">
+            <Nav className="me-auto">
+              <Nav.Link href="/nfts/gallery">
+                <Image src={layer1} />
+                <div className="button-text">Gallery</div>
+              </Nav.Link>
+              <Nav.Link href="/nfts/search">Search</Nav.Link>
+              <Nav.Link href="/nfts/collection">Collection</Nav.Link>
+              <Nav.Link href="">Connect wallet</Nav.Link>
+            </Nav>
+          </div>
+        </Container>
+      </Navbar>
     </>
   );
 };

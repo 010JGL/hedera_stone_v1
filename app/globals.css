@@ -1,2 +1,28 @@
+* {
+  background-color: black;
+  color: white;
+}
 
+.navbar { 
+  background-color: black;
+}
 
+.nav-logo {
+  max-width: 98px;
+}
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-title {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.buitton-text {
+  position: relative;
+  text-align: center;
+  color: white;
+}
