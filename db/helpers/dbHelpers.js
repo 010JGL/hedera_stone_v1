@@ -1,13 +1,18 @@
-import { sql } from '@vercel/postgres';
 
-export default async function createUser({data}) {
-  console.log(`data:`, data)
-  const username = data.username;
-  const name = data.name;
-  const email = data.email;
-  const password = data.password;
-  const role = data.role;
 
-  const newUser = await sql`INSERT INTO users (username, name, email, password, role) VALUES (${username}, ${name}, ${email}, ${password}, ${role});`
-  console.log(`newUser:`, newUser)
-}
+
+ 
+// export default async function handler(request, response) {
+//   const client = await db.connect();
+ 
+//   try {
+//     await client.sql`CREATE TABLE Pets ( Name varchar(255), Owner varchar(255) );`;
+//     const names = ['Fiona', 'Lucy'];
+//     await client.sql`INSERT INTO Pets (Name, Owner) VALUES (${names[0]}, ${names[1]});`;
+//   } catch (error) {
+//     return response.status(500).json({ error });
+//   }
+ 
+//   const pets = await client.sql`SELECT * FROM Pets;`;
+//   return response.status(200).json({ pets });
+// }
