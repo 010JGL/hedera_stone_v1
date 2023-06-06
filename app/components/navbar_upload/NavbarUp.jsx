@@ -28,9 +28,12 @@ const NavbarUp = () => {
             <Image src={under_name} alt="The Family Tree of the Future" />
           </div>
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/upload/upload">Upload</Nav.Link>
-            <Nav.Link href="/upload/signup">Sign Up</Nav.Link>
+            <Nav.Link href="/upload/upload">
+              <div className="button-text">Upload</div>
+            </Nav.Link>
+            <Nav.Link href="/upload/signup">
+            <div className="button-text">Sign Up</div>
+              </Nav.Link>
             <Nav.Link href="/upload/login">Log In</Nav.Link>
           </Nav>
         </Container>

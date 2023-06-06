@@ -11,7 +11,6 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../../../public/images/logo.png";
 import name from "../../../public/images/name.png";
 import under_name from "../../../public/images/under-name.png";
-import layer1 from "../../../public/images/Layer_1.png";
 
 const NavbarNfts = () => {
   return (
@@ -31,12 +30,18 @@ const NavbarNfts = () => {
           <div className="nav-links">
             <Nav className="me-auto">
               <Nav.Link href="/nfts/gallery">
-                <Image src={layer1} />
                 <div className="button-text">Gallery</div>
               </Nav.Link>
-              <Nav.Link href="/nfts/search">Search</Nav.Link>
-              <Nav.Link href="/nfts/collection">Collection</Nav.Link>
-              <Nav.Link href="">Connect wallet</Nav.Link>
+              <Nav.Link href="/nfts/search">
+                <div className="button-text">Search</div>
+              </Nav.Link>
+              <Nav.Link href="/nfts/collection">
+                <div className="button-text">Collection</div>
+              </Nav.Link>
+              <Nav.Link href="">
+                <div className="button-icon"></div>
+                <div>Connect wallet</div>
+              </Nav.Link>
             </Nav>
           </div>
         </Container>

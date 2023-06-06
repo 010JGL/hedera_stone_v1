@@ -21,13 +21,33 @@
   flex-direction: column;
 }
 
-.buitton-text {
+.button-text {
   position: relative;
   text-align: center;
+  font-weight: 200;
   color: white;
+  background-image: url("../public/images/Layer_1.png");
+  width: 100px;
+  height: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .form-container {
   padding-left: 30px;
 }
 
+.button-icon {
+  display: flex;
+  justify-content: center;
+  background-image: url("../public/images/wallet.png");
+  height: 150%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
