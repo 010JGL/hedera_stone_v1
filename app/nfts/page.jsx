@@ -5,7 +5,8 @@ import ThreeD_image from "../components/3d_image/threed_image";
 export default function Nfts() {
   return (
     <main>
-      <h1 className="title">Welcome to the NFTs page 83mb file</h1>
+      <h1 className="title">Welcome to HederaStone … Your family tree in three dimensions</h1>
+      <div>83 mb</div>
       <div className="three-d-container">
       <ThreeD_image></ThreeD_image>
       </div>

@@ -8,7 +8,9 @@
 }
 
 .nav-logo {
-  max-width: 98px;
+  max-width: 398px;
+  display: flex;
+  justify-content: flex-start;
 }
 .nav-links {
   display: flex;
