@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import createUser from "@/app/pages/api/createUser";
+import { getStaticProps } from "@/db/helpers/dbHelpers";
 
 export default function SignUp() {
   const [username, setUsername] = useState("");
@@ -17,9 +17,9 @@ export default function SignUp() {
   const handleSubmit = async (object) => {
     // validations
     console.log(`inside handleSubmit`);
-
+    getStaticProps({ username, name, email, password})
     // call db helpers
-    createUser({ username, name, email, password, role });
+    // createUser({ username, name, email, password, role });
   };
   return (
     <main>

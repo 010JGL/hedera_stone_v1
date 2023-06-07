@@ -1,4 +1,16 @@
 
+export const getStaticProps = async ({data}) => {
+  console.log(`inside getStaticProps`);
+  const res = await fetch('http://localhost:3000/api/createUser.js');
+  const repo = await res.json();
+  console.log(`repo:`, repo);
+  return { props: { repo } };
+};
+ 
+// export default function Page({ repo }) {
+//   return repo.stargazers_count;
+// }
+
 
 
  

@@ -1,7 +1,7 @@
 
 'use client'
 
-import NavbarNfts from '../components/navbar_nft/NavbarNfts';
+import NavbarNfts from "../components/navbar_nft/NavbarNfts";
 
 export default function NftsLayout ({ children }){
   return (
