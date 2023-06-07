@@ -85,6 +85,10 @@ Run `npm install react-bootstrap bootstrap`
 
 Run `npx @next/codemod new-link`
 
+# Install react-three-fiber for the 3d image
+
+Run `npm install three @react-three/fiber`  &
+`npm i @react-three/drei`
 
 Librairies?
 Components? M UI, carbon by ibm, 
