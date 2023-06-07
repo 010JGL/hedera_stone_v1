@@ -1,30 +1,23 @@
 
-export const getStaticProps = async ({data}) => {
-  console.log(`inside getStaticProps`);
-  const res = await fetch('http://localhost:3000/api/createUser.js');
-  const repo = await res.json();
-  console.log(`repo:`, repo);
-  return { props: { repo } };
-};
- 
-// export default function Page({ repo }) {
-//   return repo.stargazers_count;
-// }
+// import { db } from "@vercel/postgres";
 
-
-
- 
-// export default async function handler(request, response) {
+// export default async function createUser({ data }, response) {
 //   const client = await db.connect();
- 
+//   console.log(`data:`, data);
+
 //   try {
-//     await client.sql`CREATE TABLE Pets ( Name varchar(255), Owner varchar(255) );`;
-//     const names = ['Fiona', 'Lucy'];
-//     await client.sql`INSERT INTO Pets (Name, Owner) VALUES (${names[0]}, ${names[1]});`;
+//     const username = data.username;
+//     const name = data.name;
+//     const email = data.email;
+//     const password = data.password;
+//     const role = data.role;
+
+//     await client.sql`INSERT INTO users (username, name, email, password, role) VALUES (${username}, ${name}, ${email}, ${password}, ${role});`;
+//     console.log(`newUser:`, newUser);
 //   } catch (error) {
 //     return response.status(500).json({ error });
 //   }
- 
-//   const pets = await client.sql`SELECT * FROM Pets;`;
-//   return response.status(200).json({ pets });
+
+//   const usersList = await client.sql`SELECT * FROM users;`;
+//   return response.status(200).json({ usersList });
 // }

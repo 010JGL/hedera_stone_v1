@@ -1,4 +1,4 @@
-import { sql } from "@vercel/postgres";
+
 import { db } from "@vercel/postgres";
 
 export default async function createUser({ data }, response) {
