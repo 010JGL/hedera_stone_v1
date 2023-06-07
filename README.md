@@ -95,6 +95,11 @@ Components? M UI, carbon by ibm,
 styling CSS 4 options
 
 
+-Connect wallet button, does bladewallet comes with a button?
+-3d image loading time
+-Login feature, use bcrypt?
+
+
 
 
 
