@@ -19,12 +19,7 @@ const NavbarNfts = () => {
         <Container>
           <Navbar.Brand href="/">
             <div className="nav-logo">
-              <Image
-                src={logo}
-                width={80}
-                height={80}
-                alt="HederaStone Logo"
-              />
+              <Image src={logo} width={80} height={80} alt="HederaStone Logo" />
             </div>
           </Navbar.Brand>
           <div className="nav-title">

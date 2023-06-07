@@ -20,7 +20,7 @@ const NavbarUp = () => {
         <Container>
           <Navbar.Brand href="/">
             <div className="nav-logo">
-              <Image src={logo} alt="HederaStone Logo" />
+              <Image src={logo} width={80} height={80} alt="HederaStone Logo" />
             </div>
           </Navbar.Brand>
           <div className="nav-title">
@@ -32,8 +32,8 @@ const NavbarUp = () => {
               <div className="button-text">Upload</div>
             </Nav.Link>
             <Nav.Link href="/upload/signup">
-            <div className="button-text">Sign Up</div>
-              </Nav.Link>
+              <div className="button-text">Sign Up</div>
+            </Nav.Link>
             <Nav.Link href="/upload/login">Log In</Nav.Link>
           </Nav>
         </Container>

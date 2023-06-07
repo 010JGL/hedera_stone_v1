@@ -99,7 +99,7 @@ styling CSS 4 options
 -3d image loading time
 -Login feature, use bcrypt?
 
-
+-Quality of images from figma sucks
 
 
 

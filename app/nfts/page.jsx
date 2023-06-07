@@ -10,6 +10,10 @@ export default function Nfts() {
       <div className="three-d-container">
       <ThreeD_image></ThreeD_image>
       </div>
+      <div className="home-display">
+        <div>text</div>
+        <div>img</div>
+      </div>
     </main>
   );
 }
