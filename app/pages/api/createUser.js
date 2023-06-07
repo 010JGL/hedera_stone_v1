@@ -2,6 +2,7 @@
 import { db } from "@vercel/postgres";
 
 export default async function createUser({ data }, response) {
+  
   const client = await db.connect();
   console.log(`data:`, data);
 

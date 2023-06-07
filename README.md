@@ -96,7 +96,7 @@ styling CSS 4 options
 
 
 -Connect wallet button, does bladewallet comes with a button?
--3d image loading time
+-3d image loading time           PRELOAD IT
 -Login feature, use bcrypt?
 
 -Quality of images from figma sucks

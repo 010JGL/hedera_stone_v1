@@ -18,10 +18,21 @@ export default function SignUp() {
  
 
   const handleSubmit = async (object) => {
+    object.preventDefault();
     // validations
 
     console.log(`inside handleSubmit`);
-    POST()
+
+    const res = await fetch('/api/createUser', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'API-Key': process.env.DATA_API_KEY,
+      },
+      body: JSON.stringify({ time: new Date().toISOString() }),
+    });
+   
+    const data = await res.json();
     
   };
   return (
