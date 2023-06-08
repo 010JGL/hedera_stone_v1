@@ -1,39 +1,37 @@
-"use client";
-
-
 import React, { useState } from "react";
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { POST } from "./api/route";
-
 export default function SignUp() {
-  const [username, setUsername] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("jaycool");
+  const [name, setName] = useState("Jay Cool");
+  const [email, setEmail] = useState("jay@cool.slm");
+  const [password, setPassword] = useState("hello123");
   const [role, setRole] = useState("basic");
 
- 
-
-  const handleSubmit = async (object) => {
-    object.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     // validations
 
     console.log(`inside handleSubmit`);
 
-    const res = await fetch('/api/createUser', {
-      method: 'POST',
+    const res = await fetch("/api/signup", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
-        'API-Key': process.env.DATA_API_KEY,
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ time: new Date().toISOString() }),
+      body: JSON.stringify({
+        time: new Date().toISOString(),
+        username,
+        name,
+        email,
+        password,
+      }),
     });
-   
+
     const data = await res.json();
-    
+    console.log(data);
   };
   return (
     <main>

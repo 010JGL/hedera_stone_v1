@@ -1,35 +1,37 @@
 "use client";
-
-import React, { useState } from "react";
+import React from "react";
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { handleSubmit } from "./actions";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("jay@cool.slm");
+  // const [password, setPassword] = useState("hello123");
 
   return (
     <main>
       <h1 className="title">Login here</h1>
       <div className="form-container">
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control
               type="email"
+              name="email"
               placeholder="Enter email"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
+              // onChange={(e) => setEmail(e.target.value)}
+              defaultValue="jay@cool.slm"
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
+              name="password"
               placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
+              // onChange={(e) => setPassword(e.target.defaultValue)}
+              defaultValue="hello123"
             />
           </Form.Group>
           <Button variant="primary" type="submit">
