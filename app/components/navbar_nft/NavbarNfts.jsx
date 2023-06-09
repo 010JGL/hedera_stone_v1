@@ -3,50 +3,53 @@
 import React, { useState } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-
-import logo from "../../../public/images/logo.png";
-import name from "../../../public/images/name.png";
+import logo from "../../../public/images/HederaStoneLogo.jpg";
+import title from "../../../public/images/HederaStoneTitle.png";
 import under_name from "../../../public/images/under-name.png";
+import wallet from "../../../public/images/WalletIcon.png";
 
 const NavbarNfts = () => {
   return (
-    <>
-      <Navbar className="navbar" variant="dark">
-        <Container>
-          <Navbar.Brand href="/">
-            <div className="nav-logo">
-              <Image src={logo} width={80} height={80} alt="HederaStone Logo" />
-            </div>
-          </Navbar.Brand>
-          <div className="nav-title">
-            <Image src={name} alt="HederaStone" />
-            <Image src={under_name} alt="The Family Tree of the Future" />
-          </div>
-
-          <div className="nav-links">
-            <Nav className="me-auto">
-              <Nav.Link href="/nfts/gallery">
-                <div className="button-text">Gallery</div>
-              </Nav.Link>
-              <Nav.Link href="/nfts/search">
-                <div className="button-text">Search</div>
-              </Nav.Link>
-              <Nav.Link href="/nfts/collection">
-                <div className="button-text">Collection</div>
-              </Nav.Link>
-              <Nav.Link href="">
-                <div className="button-icon"></div>
-                <div>Connect wallet</div>
-              </Nav.Link>
-            </Nav>
-          </div>
-        </Container>
-      </Navbar>
-    </>
+    <ul className="nav-container">
+      <div className="nav-logo">
+        <Link href="/">
+          <Image src={logo} width={100} height={100} alt="HederaStone Logo" />
+        </Link>
+      </div>
+      <div className="nav-title">
+        <Image src={title} width={200} height={40} alt="HederaStone" />
+        <Image
+          src={under_name}
+          width={286}
+          height={32}
+          alt="The Family Tree of the Future"
+        />
+      </div>
+      <div className="button-container">
+        <div className="button-box">
+          <Link href="/nfts/gallery">
+            <div className="button-text">Gallery</div>
+          </Link>
+        </div>
+        <div className="button-box">
+          <Link href="/nfts/search">
+            <div className="button-text">Search</div>
+          </Link>
+        </div>
+        <div className="button-box">
+          <Link href="/nfts/collection">
+            <div className="button-text">Collection</div>
+          </Link>
+        </div>
+      </div>
+      <div className="button-icon">
+        <Link href="/upload/login">
+          <Image src={wallet} width={50} height={50} alt="Login button" />
+        </Link>
+      </div>
+    </ul>
   );
 };
 

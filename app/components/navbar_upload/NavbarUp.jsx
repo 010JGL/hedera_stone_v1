@@ -39,16 +39,11 @@ const NavbarUp = () => {
           </Link>
         </div>
       </div>
-        <div className="button-login">
-          <Link href="/upload/login">
-          <Image
-          src={Login}
-          width={50}
-          height={50}
-          alt="Login button"
-        />
-          </Link>
-        </div>
+      <div className="button-login">
+        <Link href="/upload/login">
+          <Image src={Login} width={50} height={50} alt="Login button" />
+        </Link>
+      </div>
     </ul>
   );
 };

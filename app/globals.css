@@ -2,6 +2,21 @@
   background-color: black;
   color: white;
 }
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
 
 .navbar { 
   background-color: black;
@@ -26,6 +41,8 @@
   padding-left: 30px;
   padding-top: 30px;
 }
+
+
 .button-box {
   display: flex;
   justify-self: center;
@@ -63,12 +80,10 @@
 }
 .button-icon {
   display: flex;
-  justify-content: center;
-  background-image: url("../public/images/wallet.png");
-  height: 150%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  text-align: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 40px;
+  padding-top: 17px;
 }
 
 .icon-container {
@@ -83,18 +98,3 @@
 
 
 
-a:link {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-a:active {
-  text-decoration: none;
-}
