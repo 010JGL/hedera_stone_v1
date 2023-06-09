@@ -7,38 +7,60 @@
   background-color: black;
 }
 
-.nav-logo {
-  max-width: 398px;
-  display: flex;
-  justify-content: flex-start;
-}
 .nav-links {
   display: flex;
   justify-content: flex-end;
 }
 
+.nav-container {
+  display: flex;
+  flex-direction: row;
+}
+.nav-logo {
+  padding-top: 30px;
+}
 .nav-title {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+  padding-left: 30px;
+  padding-top: 30px;
 }
-
+.button-box {
+  display: flex;
+  justify-self: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+}
 .button-text {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-weight: 200;
+  font-weight: 300;
   color: white;
   background-image: url("../public/images/Layer_1.png");
   width: 100px;
-  height: 24px;
+  height: 32px;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .form-container {
   padding-left: 30px;
 }
-
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.button-login {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 40px;
+  padding-top: 17px;
+}
 .button-icon {
   display: flex;
   justify-content: center;
@@ -57,4 +79,22 @@
 .threed-image-container {
   display: flex;
   justify-content: center;
+}
+
+
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
