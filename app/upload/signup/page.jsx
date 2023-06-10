@@ -15,7 +15,7 @@ export default function SignUp() {
     e.preventDefault();
     // validations
 
-    console.log(`inside handleSubmit`);
+    // console.log(`inside handleSubmit`);
 
     const res = await fetch("/api/signup", {
       method: "POST",

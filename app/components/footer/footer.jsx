@@ -10,7 +10,7 @@ export default function Footer() {
     <div className="footer-box">
       <div>Footer</div>
       <div className="footer-icons">
-        <Image src={footerIcons} width={30} height={30} alt="Various partner icons"></Image>
+        <Image src={footerIcons} width={259} height={57} alt="Various partner icons"></Image>
       </div>
     </div>
   )

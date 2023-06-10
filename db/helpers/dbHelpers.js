@@ -1,23 +1,25 @@
 
-// import { db } from "@vercel/postgres";
+import { db } from "@vercel/postgres";
 
-// export default async function createUser({ data }, response) {
-//   const client = await db.connect();
-//   console.log(`data:`, data);
+import { sql } from "@vercel/postgres";
 
-//   try {
-//     const username = data.username;
-//     const name = data.name;
-//     const email = data.email;
-//     const password = data.password;
-//     const role = data.role;
+export default async function createUser({ data }) {
+  const client = await db.connect();
+  console.log(`data:`, data);
 
-//     await client.sql`INSERT INTO users (username, name, email, password, role) VALUES (${username}, ${name}, ${email}, ${password}, ${role});`;
-//     console.log(`newUser:`, newUser);
-//   } catch (error) {
-//     return response.status(500).json({ error });
-//   }
+  try {
+    const username = data.username;
+    const name = data.name;
+    const email = data.email;
+    const password = data.password;
+    const role = data.role;
 
-//   const usersList = await client.sql`SELECT * FROM users;`;
-//   return response.status(200).json({ usersList });
-// }
+    await client.sql`INSERT INTO users (username, name, email, password, role) VALUES (${username}, ${name}, ${email}, ${password}, ${role});`;
+    console.log(`newUser:`, newUser);
+  } catch (error) {
+    return response.status(500).json({ error });
+  }
+
+  const usersList = await client.sql`SELECT * FROM users;`;
+  return response.status(200).json({ usersList });
+}
