@@ -2,6 +2,7 @@
   background-color: black;
   color: white;
 }
+
 a:link {
   text-decoration: none;
 }
@@ -96,5 +97,7 @@ a:active {
   justify-content: center;
 }
 
-
+.footer-box {
+  background-color: aliceblue;
+}
 

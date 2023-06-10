@@ -92,14 +92,12 @@ Run `npm install three @react-three/fiber`  &
 
 Librairies?
 Components? M UI, carbon by ibm, 
-styling CSS 4 options
 
 
--Connect wallet button, does bladewallet comes with a button?
 -3d image loading time           PRELOAD IT
--Login feature, use bcrypt?
+-Login feature, use bcrypt? yes
 
--Quality of images from figma sucks
+- add one background image or cut it for the footer and have the rest back
 
 
 
