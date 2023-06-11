@@ -9,16 +9,24 @@ export async function POST(request) {
   
   const email = res.email;
   const password = res.password;
-
+  console.log(`password:`, password)
   // Validations here for same pasword
+
+  const wrong = {};
 
   const getUserPassword = await client.sql`SELECT password FROM users WHERE email = ${email};`;
   console.log(`getUserPassword:`, getUserPassword.rows[0].password)
 
-  
-  
-  const sendData = { ...res, success: true };
+  if (getUserPassword.rows[0].password == password) {
 
-  return NextResponse.json(sendData);
+    const sendData = { ...res, success: true };
+  
+    return NextResponse.json(sendData);
+  } else {
+
+    console.log(`Wrong password`)
+    return NextResponse.json(wrong);
+  }
+  
 
 }

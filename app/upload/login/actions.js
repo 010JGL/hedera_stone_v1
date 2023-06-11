@@ -9,10 +9,10 @@ export const handleSubmit = async (e) => {
     password: formData.get("password"),
   };
 
-  console.log("Do something with this data", data);
+  //console.log("Do something with this data", data);
   const currentEmail = data.email
   const currentPass = data.password
-  console.log(`currentPass:`, currentPass)
+  //console.log(`currentPass:`, currentPass)
   
   const res = await fetch("/api/login", {
     method: "POST",
@@ -23,18 +23,20 @@ export const handleSubmit = async (e) => {
       email: currentEmail,
       password: currentPass,
     }),
-    
   });
 
+  // returns an empty object if password doesnt match
   const data2 = await res.json();
   console.log(`data2:`, data2);
-
-  if (data2.password === currentPass) {
-    console.log(`Success login`)
-
-  } else {
+  // checks if object empty
+  if (Object.keys(data2).length < 1) {
     alert(`Wrong password`)
+  } else {
+
+    // login logic here
+    console.log(`login success`)
   }
+
 
 };
 
