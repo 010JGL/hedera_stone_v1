@@ -7,15 +7,42 @@ import Form from "react-bootstrap/Form";
 
 export default function UploadForm() {
 
-  const [words, setWords] = useState("");
-  const [firstname, setFirstname] = useState("");
-  const [middlename, setMiddlename] = useState("");
-  const [surname, setSurname] = useState("");
-  const [birthdate, setBirthdate] = useState("");
-  const [datedied, setDatedied] = useState("");
-  const [country, setCountry] = useState("");
-  const [city, setCity] = useState("");
+  const [words, setWords] = useState("BedTableDoor");
+  const [firstname, setFirstname] = useState("John");
+  const [middlename, setMiddlename] = useState("Alex");
+  const [surname, setSurname] = useState("Wick");
+  const [datebirth, setDatebirth] = useState("1979-01-01");
+  const [datedied, setDatedied] = useState("2023-01-01");
+  const [country, setCountry] = useState("Mexico");
+  const [city, setCity] = useState("Cancun");
   
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // validations
+
+    console.log(`inside handleSubmit upload`);
+
+    const res = await fetch("/api/upload", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        time: new Date().toISOString(),
+        words,
+        firstname,
+        middlename,
+        surname,
+        datebirth,
+        datedied,
+        country,
+        city,
+      }),
+    });
+
+    const data3 = await res.json();
+    console.log(data3);
+  };
 
   return (
     <main>
@@ -24,37 +51,37 @@ export default function UploadForm() {
         <Form>
           <Form.Group className="mb-3" controlId="formBasicW3w">
             <Form.Label>Headstone(What3Words)</Form.Label>
-            <Form.Control type="words" name="words" placeholder="Headstone(What3Words)" />
+            <Form.Control value={words} onChange={(e) => setWords(e.target.value)} type="words" name="words" placeholder="Headstone(What3Words)" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicFirstname">
             <Form.Label>First Name</Form.Label>
-            <Form.Control type="firstname" name="firstname" placeholder="First Name" />
+            <Form.Control value={firstname} type="firstname" onChange={(e) => setFirstname(e.target.value)} name="firstname" placeholder="First Name" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicMiddlename">
             <Form.Label>Middle Name</Form.Label>
-            <Form.Control type="middlename" name="middlename" placeholder="Middle Name" />
+            <Form.Control value={middlename} onChange={(e) => setMiddlename(e.target.value)} type="middlename" name="middlename" placeholder="Middle Name" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicSurname">
             <Form.Label>Surname</Form.Label>
-            <Form.Control type="surname" name="surname" placeholder="Surname" />
+            <Form.Control value={surname} onChange={(e) => setSurname(e.target.value)} type="surname" name="surname" placeholder="Surname" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicDateOfBirth">
             <Form.Label>Date of Birth</Form.Label>
-            <Form.Control type="birthdate" name="birthdate" placeholder="Date of Birth" />
+            <Form.Control value={datebirth} onChange={(e) => setDatebirth(e.target.value)} type="datebirth" name="datebirth" placeholder="Date of Birth" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicDateDied">
             <Form.Label>Date Died</Form.Label>
-            <Form.Control type="datedied" name="datedied" placeholder="Date Died" />
+            <Form.Control value={datedied} onChange={(e) => setDatedied(e.target.value)} type="datedied" name="datedied" placeholder="Date Died" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCountry">
             <Form.Label>Country</Form.Label>
-            <Form.Control type="country" name="country" placeholder="Country" />
+            <Form.Control value={country} onChange={(e) => setCountry(e.target.value)} type="country" name="country" placeholder="Country" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCity">
             <Form.Label>City</Form.Label>
-            <Form.Control type="city" name="city" placeholder="City" />
+            <Form.Control value={city} onChange={(e) => setCity(e.target.value)} type="city" name="city" placeholder="City" />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" onClick={handleSubmit}>
             Submit
           </Button>
         </Form>
