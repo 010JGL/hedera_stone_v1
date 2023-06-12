@@ -3,7 +3,7 @@ import { db } from "@vercel/postgres";
 
 const client = await db.connect();
 await client.sql`DROP TABLE IF EXISTS nfts CASCADE;`;
-await client.sql`CREATE TABLE nfts (  
+await client.sql`CREATE TABLE nfts (
     id SERIAL PRIMARY KEY,
     words VARCHAR(255) NOT NULL,
     firstname VARCHAR(255) NOT NULL,
@@ -13,6 +13,7 @@ await client.sql`CREATE TABLE nfts (
     datedied VARCHAR(255) NOT NULL,
     country VARCHAR(255) NOT NULL,
     city VARCHAR(255) NOT NULL,
-    description TEXT NOT NULL,
+    cemeteryname VARCHAR(255) NOT NULL,
+    extras VARCHAR(255) NOT NULL,
     date TIMESTAMP
     );`;

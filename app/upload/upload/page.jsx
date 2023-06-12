@@ -15,7 +15,10 @@ export default function UploadForm() {
   const [datedied, setDatedied] = useState("2023-01-01");
   const [country, setCountry] = useState("Mexico");
   const [city, setCity] = useState("Cancun");
-  
+  const [cemeteryname, setCemeteryname] = useState("St Marc");
+  const [extras, setExtras] = useState("Extras... Extras... Extras... Extras...");
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     // validations
@@ -37,6 +40,8 @@ export default function UploadForm() {
         datedied,
         country,
         city,
+        cemeteryname,
+        extras
       }),
     });
 
@@ -52,6 +57,18 @@ export default function UploadForm() {
           <Form.Group className="mb-3" controlId="formBasicW3w">
             <Form.Label>Headstone(What3Words)</Form.Label>
             <Form.Control value={words} onChange={(e) => setWords(e.target.value)} type="words" name="words" placeholder="Headstone(What3Words)" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCountry">
+            <Form.Label>Country</Form.Label>
+            <Form.Control value={country} onChange={(e) => setCountry(e.target.value)} type="country" name="country" placeholder="Country" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCity">
+            <Form.Label>City</Form.Label>
+            <Form.Control value={city} onChange={(e) => setCity(e.target.value)} type="city" name="city" placeholder="City" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicFirstname">
+            <Form.Label>Cemetery Name</Form.Label>
+            <Form.Control value={cemeteryname} type="cemeteryname" onChange={(e) => setCemeteryname(e.target.value)} name="cemeteryname" placeholder="Cemetery Name" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicFirstname">
             <Form.Label>First Name</Form.Label>
@@ -73,14 +90,12 @@ export default function UploadForm() {
             <Form.Label>Date Died</Form.Label>
             <Form.Control value={datedied} onChange={(e) => setDatedied(e.target.value)} type="datedied" name="datedied" placeholder="Date Died" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCountry">
-            <Form.Label>Country</Form.Label>
-            <Form.Control value={country} onChange={(e) => setCountry(e.target.value)} type="country" name="country" placeholder="Country" />
+          <Form.Group className="mb-3" controlId="formBasicDateDied">
+            <Form.Label>Extras</Form.Label>
+            <Form.Control value={extras} onChange={(e) => setExtras(e.target.value)} type="extras" name="extras" placeholder="Extras" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCity">
-            <Form.Label>City</Form.Label>
-            <Form.Control value={city} onChange={(e) => setCity(e.target.value)} type="city" name="city" placeholder="City" />
-          </Form.Group>
+
+
           <Button variant="primary" type="submit" onClick={handleSubmit}>
             Submit
           </Button>

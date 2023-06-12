@@ -14,12 +14,14 @@ export async function POST(request) {
   const datedied = res.datedied;
   const country = res.country;
   const city = res.city;
+  const cemeteryname = res.cemeteryname;
+  const extras = res.extras;
 
   // Validations here for same Username
 
   // Creates a new user into DB
   const newUpload =
-    await client.sql`INSERT INTO nfts (words, firstname, middlename, surname, datebirth, datedied, country, city) VALUES (${words}, ${firstname}, ${middlename}, ${surname}, ${datebirth}, ${datedied}, ${country}, ${city});`;
+    await client.sql`INSERT INTO nfts (words, firstname, middlename, surname, datebirth, datedied, country, city, cemeteryname, extras) VALUES (${words}, ${firstname}, ${middlename}, ${surname}, ${datebirth}, ${datedied}, ${country}, ${city}, ${cemeteryname}, ${extras});`;
   console.log(`newUpload`, newUpload);
   const sendData = { ...res, success: true };
 
