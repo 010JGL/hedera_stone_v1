@@ -101,3 +101,23 @@ a:active {
   background-color: aliceblue;
 }
 
+.container-row1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 2rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
