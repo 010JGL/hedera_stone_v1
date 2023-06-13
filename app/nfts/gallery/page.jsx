@@ -32,6 +32,7 @@ export default function Gallery() {
     <main>
       <h1 className="title">Gallery</h1>
 
+
       <div className="cards-container">
         <Grid.Container gap={2} justify="flex-start">
           {list.map((item, index) => (
