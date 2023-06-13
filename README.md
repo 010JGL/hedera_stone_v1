@@ -90,7 +90,7 @@ Run `npx @next/codemod new-link`
 Run `npm install three @react-three/fiber`  &
 `npm i @react-three/drei`
 
-# Install next UI
+# Install next UI library
 
 Run `npm i @nextui-org/react`
 
