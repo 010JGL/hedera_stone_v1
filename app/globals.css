@@ -105,7 +105,6 @@ a:active {
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
 
 .cards-container {
@@ -120,4 +119,9 @@ a:active {
 .title {
   display: flex;
   justify-content: center;
+}
+
+.card-img {
+  max-width: 400px;
+  
 }
