@@ -24,8 +24,8 @@ export default function ThreeD_image2() {
         <PresentationControls
           speed={1.2}
           global
-          zoom={0.5}
-          polar={[-0.1, Math.PI / 4]}
+          zoom={10}
+          polar={[-0.1, Math.PI / 10]}
         >
           <Stage environment={null}>
             <Model scale={0.01} />
