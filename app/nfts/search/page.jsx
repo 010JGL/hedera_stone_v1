@@ -32,7 +32,7 @@ export default function Search() {
   }
 
   return (
-    <main>
+    <main className="main">
       <h1 className="title">Search</h1>
       <div className="form-container">
       <Form>

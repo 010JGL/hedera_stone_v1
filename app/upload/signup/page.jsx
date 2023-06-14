@@ -35,7 +35,7 @@ export default function SignUp() {
     //console.log(data);
   };
   return (
-    <main>
+    <main className="main">
       <h1 className="title">Sign up here</h1>
       <div className="form-container">
         <Form>

@@ -7,7 +7,6 @@ import Image from "next/image";
 
 import logo from "../../../public/images/HederaStoneLogo.jpg";
 import title from "../../../public/images/HederaStoneTitle.png";
-import under_name from "../../../public/images/under-name.png";
 import Login from "../../../public/images/LoginIcon.png";
 
 const NavbarUp = () => {

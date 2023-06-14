@@ -1,5 +1,6 @@
-* {
-  background-color: black;
+
+body {
+  background-image: url('../public/images/background3.png');
   color: white;
 }
 
@@ -112,10 +113,6 @@ a:active {
   justify-content: center;
 }
 
-.footer-box {
-  background-color: aliceblue;
-}
-
 .container-row1 {
   display: flex;
   flex-direction: row;
@@ -135,10 +132,41 @@ a:active {
   display: flex;
   justify-content: center;
 }
-
-
 .form-container {
   margin-left: 300px;
   margin-right: 300px;
-
 }
+.main { 
+  min-height: 2000px;
+}
+.footer-box {
+  display: flex;
+}
+.footer-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 200px;
+}
+.footer-icons-title {
+  padding-bottom: 60px;
+  font-size: 3.5rem;
+  font-weight: 100;
+}
+.footer-icons-names {
+  padding-top: 10px;
+  font-size: 2.8rem;
+  font-weight: 100;
+  font-style: italic;
+}
+.hedera-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  
+}
+

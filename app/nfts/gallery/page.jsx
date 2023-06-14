@@ -29,7 +29,7 @@ export default function Gallery() {
   ];
 
   return (
-    <main>
+    <main className="main">
       <h1 className="title">Gallery</h1>
 
 

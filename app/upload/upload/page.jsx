@@ -50,7 +50,7 @@ export default function UploadForm() {
   };
 
   return (
-    <main>
+    <main className="main">
       <h1 className="title">Welcome to the upload page</h1>
       <div className="form-container">
         <Form>

@@ -7,8 +7,6 @@ import Link from "next/link";
 
 import logo from "../../../public/images/HederaStoneLogo.jpg";
 import title from "../../../public/images/HederaStoneTitle.png";
-import under_name from "../../../public/images/under-name.png";
-import under_name2 from "../../../public/images/TheDFamilyTreeoftheFuture2.png";
 import wallet from "../../../public/images/WalletIcon.png";
 
 const NavbarNfts = () => {

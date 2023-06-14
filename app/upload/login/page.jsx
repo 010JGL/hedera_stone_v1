@@ -11,7 +11,7 @@ export default function Login() {
 
   
   return (
-    <main>
+    <main className="main">
       <h1 className="title">Login here</h1>
       <div className="form-container">
         <Form onSubmit={handleSubmit}>
