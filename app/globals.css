@@ -90,14 +90,16 @@ a:active {
   text-align: end;
   padding-right: 4px;
 }
-
-
 .button-icon {
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
+  width: 50%;
   padding-right: 40px;
-  padding-top: 17px;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.button-icon-text {
+  padding-top: 10px;
 }
 
 .icon-container {

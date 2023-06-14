@@ -45,6 +45,7 @@ const NavbarNfts = () => {
         <Link href="/upload/login">
           <Image src={wallet} width={50} height={50} alt="Login button" />
         </Link>
+        <div className="button-icon-text">Connect Blade Wallet</div>
       </div>
     </ul>
   );
