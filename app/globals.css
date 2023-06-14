@@ -27,7 +27,11 @@ a:active {
   display: flex;
   justify-content: flex-end;
 }
-
+.nav-message {
+  font-size: small;
+  color: lightgrey;
+  font-style: italic;
+}
 .nav-container {
   display: flex;
   flex-direction: row;
@@ -37,10 +41,11 @@ a:active {
 }
 .nav-title {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-direction: column;
   padding-left: 30px;
   padding-top: 30px;
+  
 }
 
 
@@ -64,9 +69,7 @@ a:active {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.form-container {
-  padding-left: 30px;
-}
+
 .button-container {
   display: flex;
   justify-content: center;
@@ -74,11 +77,21 @@ a:active {
 }
 .button-login {
   display: flex;
-  justify-content: flex-end;
   width: 100%;
   padding-right: 40px;
   padding-top: 17px;
+  margin-top: 20px;
+  align-items: end;
+  flex-direction: column;
 }
+.button-login-text {
+  display: flex;
+  color: lightgrey;
+  text-align: end;
+  padding-right: 4px;
+}
+
+
 .button-icon {
   display: flex;
   justify-content: flex-end;
@@ -121,3 +134,9 @@ a:active {
   justify-content: center;
 }
 
+
+.form-container {
+  margin-left: 300px;
+  margin-right: 300px;
+
+}

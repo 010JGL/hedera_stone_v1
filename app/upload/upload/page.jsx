@@ -55,7 +55,7 @@ export default function UploadForm() {
       <div className="form-container">
         <Form>
           <Form.Group className="mb-3" controlId="formBasicW3w">
-            <Form.Label>Headstone(What3Words)</Form.Label>
+            <Form.Label>Headstone Location (What3Words)</Form.Label>
             <Form.Control value={words} onChange={(e) => setWords(e.target.value)} type="words" name="words" placeholder="Headstone(What3Words)" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCountry">

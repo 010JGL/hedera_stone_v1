@@ -19,13 +19,8 @@ const NavbarUp = () => {
         </Link>
       </div>
       <div className="nav-title">
-        <Image src={title} width={200} height={40} alt="HederaStone" />
-        <Image
-          src={under_name}
-          width={286}
-          height={32}
-          alt="The Family Tree of the Future"
-        />
+        <Image src={title} width={240} height={40} alt="HederaStone" />
+        <div className="nav-message">The 3D Family Tree of the Future</div>
       </div>
       <div className="button-container">
         <div className="button-box">
@@ -43,6 +38,7 @@ const NavbarUp = () => {
         <Link href="/upload/login">
           <Image src={Login} width={50} height={50} alt="Login button" />
         </Link>
+        <div className="button-login-text">Login</div>
       </div>
     </ul>
   );

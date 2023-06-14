@@ -8,6 +8,7 @@ import Link from "next/link";
 import logo from "../../../public/images/HederaStoneLogo.jpg";
 import title from "../../../public/images/HederaStoneTitle.png";
 import under_name from "../../../public/images/under-name.png";
+import under_name2 from "../../../public/images/TheDFamilyTreeoftheFuture2.png";
 import wallet from "../../../public/images/WalletIcon.png";
 
 const NavbarNfts = () => {
@@ -19,13 +20,9 @@ const NavbarNfts = () => {
         </Link>
       </div>
       <div className="nav-title">
-        <Image src={title} width={200} height={40} alt="HederaStone" />
-        <Image
-          src={under_name}
-          width={286}
-          height={32}
-          alt="The Family Tree of the Future"
-        />
+        <Image src={title} width={240} height={40} alt="HederaStone" />
+    
+        <div className="nav-message">The 3D Family Tree of the Future</div>
       </div>
       <div className="button-container">
         <div className="button-box">
