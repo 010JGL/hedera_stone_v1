@@ -75,7 +75,7 @@ export default function Gallery() {
     <main className="main">
       <h1 className="title">Gallery</h1>
 
-      <div>
+      <div className="cards-container">
         <Grid.Container gap={2} justify="flex-start">
           {nftsList.map((item, index) => (
             <Card key={index} css={{ w: "25%", h: "400px" }}>

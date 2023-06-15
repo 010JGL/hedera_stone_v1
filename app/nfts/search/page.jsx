@@ -10,8 +10,8 @@ export default function Search() {
 
   const [firstname, setFirstname] = useState("");
 
-  const handleSearch = async (e) => {
-    e.preventDefault();
+  const handleSearch = async (error) => {
+    error.preventDefault();
     // validations
 
     console.log(`inside handlesearch`);
@@ -40,7 +40,7 @@ export default function Search() {
           <Form.Label>First Name</Form.Label>
           <Form.Control
             value={firstname}
-            onChange={(e) => setFirstname(e.target.value)}
+            onChange={(error) => setFirstname(error.target.value)}
             type="firstname"
             name="firstname"
             placeholder="First Name"
