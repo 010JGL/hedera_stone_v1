@@ -13,8 +13,10 @@ import { sql } from "@vercel/postgres";
     datebirth VARCHAR(255) NOT NULL,
     datedied VARCHAR(255) NOT NULL,
     country VARCHAR(255) NOT NULL,
+    state VARCHAR(255) NOT NULL,
     city VARCHAR(255) NOT NULL,
     cemeteryname VARCHAR(255) NOT NULL,
     extras VARCHAR(255) NOT NULL,
+    iconUrl VARCHAR(255) NOT NULL,
     date TIMESTAMP
     );`;
