@@ -23,32 +23,20 @@ export default function Gallery() {
   const [iconUrl, setIconUrl] = useState("");
   const [nftsList, setNftsList] = useState([
     {
-      title: "Orange",
-      img: "/images/fruit-1.jpeg",
-      price: "$5.50",
     },
     {
-      title: "Tangerine",
-      img: "/images/fruit-2.jpeg",
-      price: "$3.00",
     },
     {
-      title: "Cherry",
-      img: "/images/fruit-3.jpeg",
-      price: "$10.00",
     },
     {
-      title: "Lemon",
-      img: "/images/fruit-4.jpeg",
-      price: "$5.30",
     },
   ]);
 
-  const loadGallery = async (e) => {
+  const loadGallery = async () => {
     // e.preventDefault();
     // validations
 
-    console.log(`inside handleSubmit`);
+    //console.log(`inside handleSubmit`);
 
     const res = await fetch("/api/gallery", {
       method: "POST",
@@ -73,61 +61,24 @@ export default function Gallery() {
     });
 
     const data = await res.json();
-    console.log(`data:`, data);
+    //console.log(`data:`, data);
     setNftsList(data);
 
-    console.log(`nftsList:`, nftsList);
+    //console.log(`nftsList:`, nftsList);
   };
   loadGallery();
-  const image = nftsList[1].iconurl;
+  
 
-  console.log(`image:`, image);
+  
 
   return (
     <main className="main">
       <h1 className="title">Gallery</h1>
 
-      <div className="cards-container">
-        <Grid.Container gap={2} justify="flex-start">
-          {nftsList.map((item, index) => (
-            <Grid xs={6} sm={3} key={index}>
-              <Card isPressable>
-                <Card.Body css={{ p: 0 }}>
-                  <Card.Image
-                    src={nftsList[index].iconurl}
-                    objectFit="cover"
-                    width="100%"
-                    height={300}
-                    alt={nftsList[index].title}
-                  />
-                </Card.Body>
-                <Card.Divider />
-                <Card.Footer css={{ justifyItems: "flex-start" }}>
-                  <Row wrap="wrap" justify="space-between" align="center">
-                    <Text b>{nftsList[index].firstname}</Text>
-                    <Text
-                      css={{
-                        color: "$accents7",
-                        fontWeight: "$semibold",
-                        fontSize: "$sm",
-                      }}
-                    >
-                      {item.price}
-                    </Text>
-                    <Button size="sm" color="secondary">
-                      Learn more
-                    </Button>
-                  </Row>
-                </Card.Footer>
-              </Card>
-            </Grid>
-          ))}
-        </Grid.Container>
-      </div>
       <div>
         <Grid.Container gap={2} justify="flex-start">
           {nftsList.map((item, index) => (
-            <Card css={{ w: "25%", h: "400px" }}>
+            <Card key={index} css={{ w: "25%", h: "400px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text
@@ -168,6 +119,15 @@ export default function Gallery() {
                     <Text color="#000" size={12}>
                       Available soon.
                     </Text>
+                    <Text
+                      css={{
+                        color: "$accents7",
+                        fontWeight: "$semibold",
+                        fontSize: "$sm",
+                      }}
+                    >
+                      {item.datedied}
+                    </Text>
                     <Text color="#000" size={12}>
                       Get notified.
                     </Text>
@@ -196,26 +156,40 @@ export default function Gallery() {
   );
 }
 
-// {/* <Row xs={1} md={2} className="g-4">
-// {Array.from({ length: 4 }).map((_, idx) => (
-//   <Col key={idx}>
-//     <Card style={{ width: '401px' }}>
-//       {/* <Image src={example}></Image> */}
-//       <Card.Img variant="top" src={example} />
-//       {/* <Image
-//         src={example}
-//         width={400}
-//         height={250}
-//         alt="Picture of the author"
-//       ></Image> */}
-//       <Card.Body>
-
-//         <Card.Text>
-//           Description
-//         </Card.Text>
-//         <Button variant="primary">Go somewhere</Button>
-//       </Card.Body>
-//     </Card>
-//   </Col>
-// ))}
-// </Row> */}
+{/* <div className="cards-container">
+        <Grid.Container gap={2} justify="flex-start">
+          {nftsList.map((item, index) => (
+            <Grid xs={6} sm={3} key={index}>
+              <Card isPressable>
+                <Card.Body css={{ p: 0 }}>
+                  <Card.Image
+                    src={nftsList[index].iconurl}
+                    objectFit="cover"
+                    width="100%"
+                    height={300}
+                    alt={nftsList[index].title}
+                  />
+                </Card.Body>
+                <Card.Divider />
+                <Card.Footer css={{ justifyItems: "flex-start" }}>
+                  <Row wrap="wrap" justify="space-between" align="center">
+                    <Text b>{nftsList[index].firstname}</Text>
+                    <Text
+                      css={{
+                        color: "$accents7",
+                        fontWeight: "$semibold",
+                        fontSize: "$sm",
+                      }}
+                    >
+                      {item.datedied}
+                    </Text>
+                    <Button size="sm" color="secondary">
+                      Learn more
+                    </Button>
+                  </Row>
+                </Card.Footer>
+              </Card>
+            </Grid>
+          ))}
+        </Grid.Container>
+      </div> */}

@@ -14,7 +14,7 @@ export async function POST(request) {
 
   // Search for nfts
   const nftsList = await client.sql`SELECT * FROM nfts;`;
-  console.log(`nftsList.rows:`, nftsList.rows)
+  //console.log(`nftsList.rows:`, nftsList.rows)
   
   const sendData = { ...res, success: true };
 
