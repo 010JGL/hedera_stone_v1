@@ -38,7 +38,7 @@ export default function Gallery() {
 
     //console.log(`inside handleSubmit`);
 
-    const res = await fetch("/api/gallery", {
+    const res = await fetch(process.env.URL + "/api/gallery", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,6 +63,7 @@ export default function Gallery() {
     const data = await res.json();
     //console.log(`data:`, data);
     setNftsList(data);
+    
 
     //console.log(`nftsList:`, nftsList);
   };
