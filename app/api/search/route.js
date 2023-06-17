@@ -13,10 +13,10 @@ export async function POST(request) {
 
 
   // Creates a new user into DB
-  const newUser = await client.sql`SELECT * FROM nfts WHERE firstname = ${firstname};`;
-  
+  const searchList = await client.sql`SELECT * FROM nfts WHERE firstname IN (${firstname});`;
+  console.log(`searchList.rows:`, searchList.rows)
   const sendData = { ...res, success: true };
 
-  return NextResponse.json(newUser.rows);
+  return NextResponse.json(searchList.rows);
 
 }

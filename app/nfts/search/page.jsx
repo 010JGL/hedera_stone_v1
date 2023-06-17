@@ -1,17 +1,19 @@
-'use client'
+"use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import { Card, Grid, Row, Text, Col } from "@nextui-org/react";
+
+import { Button } from "@nextui-org/react";
 import { Form } from "react-bootstrap";
 
-import { Button } from "react-bootstrap";
 
 
 export default function Search() {
-
   const [firstname, setFirstname] = useState("");
 
-  const handleSearch = async (error) => {
-    error.preventDefault();
+  const handleSearch = async (e) => {
+    e.preventDefault();
     // validations
 
     console.log(`inside handlesearch`);
@@ -29,28 +31,31 @@ export default function Search() {
 
     const data3 = await res.json();
     console.log(`data3:`, data3);
-  }
+  };
+
+
 
   return (
     <main className="main">
       <h1 className="title">Search</h1>
       <div className="form-container">
-      <Form>
-        <Form.Group className="mb-3" controlId="formBasicW3w">
-          <Form.Label>First Name</Form.Label>
-          <Form.Control
-            value={firstname}
-            onChange={(error) => setFirstname(error.target.value)}
-            type="firstname"
-            name="firstname"
-            placeholder="First Name"
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit" onClick={handleSearch}>
+        <Form>
+          <Form.Group className="mb-3" controlId="formBasicW3w">
+            <Form.Label>First Name</Form.Label>
+            <Form.Control
+              value={firstname}
+              onChange={(e) => setFirstname(e.target.value)}
+              type="firstname"
+              name="firstname"
+              placeholder="First Name"
+            />
+          </Form.Group>
+          <Button variant="primary" type="submit" onClick={handleSearch}>
             Submit
           </Button>
-      </Form>
+        </Form>
       </div>
+      
     </main>
   );
 }
