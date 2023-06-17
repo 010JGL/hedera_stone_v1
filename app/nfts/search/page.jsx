@@ -1,22 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import { Card, Grid, Row, Text, Col } from "@nextui-org/react";
+import SearchResult from "@/app/components/searchResult/searchResult";
 
-import { Button } from "@nextui-org/react";
-import { Form } from "react-bootstrap";
-
-
+import { Form, Button } from "react-bootstrap";
 
 export default function Search() {
   const [firstname, setFirstname] = useState("");
+  const [data3, setData3] = useState("");
 
-  const handleSearch = async (e) => {
-    e.preventDefault();
+  const handleSearch = async (error) => {
+    error.preventDefault();
     // validations
 
-    console.log(`inside handlesearch`);
+    //console.log(`inside handlesearch`);
 
     const res = await fetch("/api/search", {
       method: "POST",
@@ -30,32 +28,56 @@ export default function Search() {
     });
 
     const data3 = await res.json();
-    console.log(`data3:`, data3);
+    //console.log(`data3:`, data3);
+    setData3(data3);
   };
 
-
-
-  return (
-    <main className="main">
-      <h1 className="title">Search</h1>
-      <div className="form-container">
-        <Form>
-          <Form.Group className="mb-3" controlId="formBasicW3w">
-            <Form.Label>First Name</Form.Label>
-            <Form.Control
-              value={firstname}
-              onChange={(e) => setFirstname(e.target.value)}
-              type="firstname"
-              name="firstname"
-              placeholder="First Name"
-            />
-          </Form.Group>
-          <Button variant="primary" type="submit" onClick={handleSearch}>
-            Submit
-          </Button>
-        </Form>
-      </div>
-      
-    </main>
-  );
+  if (data3.length < 1) {
+    return (
+      <main className="main">
+        <h1 className="title">Search Form</h1>
+        <div className="form-container">
+          <Form>
+            <Form.Group className="mb-3" controlId="formBasicW3w">
+              <Form.Label>First Name</Form.Label>
+              <Form.Control
+                value={firstname}
+                onChange={(error) => setFirstname(error.target.value)}
+                type="firstname"
+                name="firstname"
+                placeholder="First Name (Capital first letter)"
+              />
+            </Form.Group>
+            <Button variant="primary" type="submit" onClick={handleSearch}>
+              Submit
+            </Button>
+          </Form>
+        </div>
+      </main>
+    );
+  } else {
+    return (
+      <main className="main">
+        <h1 className="title">Search Another</h1>
+        <div className="form-container">
+          <Form>
+            <Form.Group className="mb-3" controlId="formBasicW3w">
+              <Form.Label>First Name</Form.Label>
+              <Form.Control
+                value={firstname}
+                onChange={(error) => setFirstname(error.target.value)}
+                type="firstname"
+                name="firstname"
+                placeholder="First Name (Capital first letter)"
+              />
+            </Form.Group>
+            <Button variant="primary" type="submit" onClick={handleSearch}>
+              Submit
+            </Button>
+          </Form>
+        </div>
+        <SearchResult list={data3}></SearchResult>
+      </main>
+    );
+  }
 }

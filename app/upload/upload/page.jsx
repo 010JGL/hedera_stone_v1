@@ -23,7 +23,9 @@ export default function UploadForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     // validations
+    // Gotta add user.id from cookies? to keep track of who uploaded 
 
     console.log(`inside handleSubmit upload`);
 

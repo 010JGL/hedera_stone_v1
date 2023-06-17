@@ -6,7 +6,6 @@ import { Card, Grid, Row, Text, Col } from "@nextui-org/react";
 
 import { Button } from "@nextui-org/react";
 
-import example from "../../../public/images/headstone-example.jpg";
 
 export default function Gallery() {
   const [words, setWords] = useState("");
@@ -25,6 +24,7 @@ export default function Gallery() {
 
   const loadGallery = async () => {
     // e.preventDefault();
+    
     // validations
     //console.log(`inside handleSubmit`);
 
@@ -51,10 +51,9 @@ export default function Gallery() {
     });
 
     const data = await res.json();
-    //console.log(`data:`, data);
+    
     setNftsList(data);
 
-    //console.log(`nftsList:`, nftsList);
   };
 
   useEffect(() => {
