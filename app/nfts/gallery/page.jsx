@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Card, Grid, Row, Text, Col } from "@nextui-org/react";
 
-import { Button } from "react-bootstrap";
+import { Button } from "@nextui-org/react";
 
 import example from "../../../public/images/headstone-example.jpg";
 
@@ -21,24 +21,14 @@ export default function Gallery() {
   const [cemeteryname, setCemeteryname] = useState("");
   const [extras, setExtras] = useState("");
   const [iconUrl, setIconUrl] = useState("");
-  const [nftsList, setNftsList] = useState([
-    {
-    },
-    {
-    },
-    {
-    },
-    {
-    },
-  ]);
+  const [nftsList, setNftsList] = useState([{}, {}, {}, {}]);
 
   const loadGallery = async () => {
     // e.preventDefault();
     // validations
-
     //console.log(`inside handleSubmit`);
 
-    const res = await fetch(process.env.URL + "/api/gallery", {
+    const res = await fetch("/api/gallery", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,101 +53,97 @@ export default function Gallery() {
     const data = await res.json();
     //console.log(`data:`, data);
     setNftsList(data);
-    
 
     //console.log(`nftsList:`, nftsList);
   };
-  loadGallery();
-  
 
-  
+  useEffect(() => {
+    loadGallery();
+  });
 
   return (
     <main className="main">
       <h1 className="title">Gallery</h1>
 
       <div className="cards-container">
-        <Grid.Container gap={2} justify="flex-start">
-          {nftsList.map((item, index) => (
-            <Card key={index} css={{ w: "25%", h: "400px" }}>
-              <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
-                <Col>
-                  <Text
-                    size={12}
-                    weight="bold"
-                    transform="uppercase"
-                    color="#ffffffAA"
-                  >
-                    New
-                  </Text>
-                  <Text h3 color="black">
-                    Title or nothing
-                  </Text>
-                </Col>
-              </Card.Header>
-              <Card.Body css={{ p: 0 }}>
-                <Card.Image
-                  src={nftsList[index].iconurl}
-                  width="100%"
-                  height="100%"
-                  objectFit="cover"
-                  alt="Card example background"
-                />
-              </Card.Body>
-              <Card.Footer
-                isBlurred
-                css={{
-                  position: "absolute",
-                  bgBlur: "#ffffff66",
-                  borderTop:
-                    "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
-                  bottom: 0,
-                  zIndex: 1,
-                }}
-              >
-                <Row>
+        {/* gap doesnt work, cant add paddin either??? wtf */}
+        <Grid.Container gap={2} justify="center">
+            {nftsList.map((item, index) => (
+              <Card key={index} css={{ w: "25%", h: "400px" }}>
+                <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                   <Col>
-                    <Text color="#000" size={12}>
-                      Available soon.
-                    </Text>
-                    <Text
-                      css={{
-                        color: "$accents7",
-                        fontWeight: "$semibold",
-                        fontSize: "$sm",
-                      }}
-                    >
-                      {item.datedied}
-                    </Text>
-                    <Text color="#000" size={12}>
-                      Get notified.
+                    <Text h3 color="black">
+                      Title
                     </Text>
                   </Col>
-                  <Col>
-                    <Row justify="flex-end">
-                      <Button flat auto rounded color="secondary">
-                        <Text
-                          css={{ color: "inherit" }}
-                          size={12}
-                          weight="bold"
-                          transform="uppercase"
-                        >
-                          Discover
-                        </Text>
-                      </Button>
-                    </Row>
-                  </Col>
-                </Row>
-              </Card.Footer>
-            </Card>
-          ))}
+                </Card.Header>
+                <Card.Body css={{ p: 0 }}>
+                  <Card.Image
+                    src={nftsList[index].iconurl}
+                    width="100%"
+                    height="100%"
+                    objectFit="cover"
+                    alt="Card example background"
+                  />
+                </Card.Body>
+                <Card.Footer
+                  isBlurred
+                  css={{
+                    position: "absolute",
+                    bgBlur: "#ffffff66",
+                    borderTop:
+                      "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
+                    bottom: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  <Row>
+                    <Col>
+                      <Text
+                        css={{
+                          color: "$accents7",
+                          fontWeight: "$semibold",
+                          fontSize: "$sm",
+                        }}
+                      >
+                        {item.datebirth}
+                      </Text>
+                      <Text
+                        css={{
+                          color: "$accents7",
+                          fontWeight: "$semibold",
+                          fontSize: "$sm",
+                        }}
+                      >
+                        {item.datedied}
+                      </Text>
+                    </Col>
+                    <Col>
+                      <Row justify="flex-end">
+                        <Button flat auto rounded color="secondary">
+                          <Text
+                            css={{ color: "inherit" }}
+                            size={12}
+                            weight="bold"
+                            transform="uppercase"
+                          >
+                            Discover
+                          </Text>
+                        </Button>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card.Footer>
+              </Card>
+            ))}
         </Grid.Container>
       </div>
     </main>
   );
 }
 
-{/* <div className="cards-container">
+{
+  /* <div className="cards-container">
         <Grid.Container gap={2} justify="flex-start">
           {nftsList.map((item, index) => (
             <Grid xs={6} sm={3} key={index}>
@@ -193,4 +179,5 @@ export default function Gallery() {
             </Grid>
           ))}
         </Grid.Container>
-      </div> */}
+      </div> */
+}
