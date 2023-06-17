@@ -10,8 +10,8 @@ export default function Search() {
   const [firstname, setFirstname] = useState("");
   const [data3, setData3] = useState("");
 
-  const handleSearch = async (error) => {
-    error.preventDefault();
+  const handleSearch = async (e) => {
+    e.preventDefault();
     // validations
 
     //console.log(`inside handlesearch`);

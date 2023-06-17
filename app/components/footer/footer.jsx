@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="hedera-icon">
-        <div className="footer-icons-title">Powered with</div>
+        <div className="footer-icons-title">Powered by</div>
         <Image
           src={hederalogo}
           width={120}
