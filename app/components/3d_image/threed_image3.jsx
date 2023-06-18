@@ -33,5 +33,7 @@ export default function ThreeD_image3() {
         </PresentationControls>
       </Canvas>
     </div>
+    
+    
   );
 }

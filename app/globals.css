@@ -124,8 +124,8 @@ a:active {
   justify-content: center;
 }
 .form-container {
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-left: 2rem;
+  width:33%;
 }
 .main { 
   min-height: 2000px;

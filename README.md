@@ -104,12 +104,15 @@ Components? M UI, carbon by ibm,
 - add one background image or cut it for the footer and have the rest back
 
 
-- Atrium stills, twilight stills picutres? small video on click
-- footer every page? all pages
 - figma, other pages
 
 - zoom in head stone
 
+
+-nft.storage type of files 
+
+
+-highlighted bold icons on navbar
 
 
 
