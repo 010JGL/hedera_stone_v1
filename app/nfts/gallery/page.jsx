@@ -119,7 +119,7 @@ export default function Gallery() {
                   </Col>
                   <Col>
                     <Row justify="flex-end">
-                      <Link href={`/gallery/${item.id}`}>
+                      <Link href={`/nfts/gallery/${item.id}`}>
                         <Button flat auto rounded color="secondary">
                           <Text
                             css={{ color: "inherit" }}

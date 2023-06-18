@@ -17,6 +17,6 @@ export async function POST(request) {
   
   const sendData = { ...res, success: true };
 
-  return NextResponse.json(nft.rows);
+  return NextResponse.json(nft.rows[0]);
 
 }
