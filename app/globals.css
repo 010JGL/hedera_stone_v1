@@ -159,4 +159,18 @@ a:active {
   align-items: center;
   width: 30%;
 }
-
+.specific-card {
+  display: flex;
+  justify-content: center;
+}
+.info-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.nextui-c-bOwhCe-ixxsp-css {
+  background-color: white;
+}
+.nextui-c-hWZRae-bzEnZV-borderWeight-normal {
+  width: 1600px;
+}
