@@ -38,6 +38,11 @@ const NavbarNfts = () => {
             <div className="button-text">Collection</div>
           </Link>
         </div>
+        <div className="button-box">
+          <Link href="/nfts/collection2">
+            <div className="button-text">Collection2</div>
+          </Link>
+        </div>
       </div>
       <div className="button-icon">
         <Link href="/upload/login">
