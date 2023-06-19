@@ -116,7 +116,16 @@ Run `npm i @nextui-org/react`
 ### To do list
 - Make the readme complete with instructions and description of the work.
 
-- Change the criteria for dynamic pathname. 
+- Cant use the DROP TABLE or seeds for DB, gotta use Vercel website
+
+
+
+### Future to do list
+
+- Login feature
+
+- Collection page
+
 
 
 
