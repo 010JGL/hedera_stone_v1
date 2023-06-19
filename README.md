@@ -94,8 +94,9 @@ Run `npm install three @react-three/fiber`  &
 
 Run `npm i @nextui-org/react`
 
-Librairies?
-Components? M UI, carbon by ibm, 
+
+
+
 
 
 -3d image loading time           PRELOAD IT
@@ -103,16 +104,22 @@ Components? M UI, carbon by ibm,
 
 - add one background image or cut it for the footer and have the rest back
 
-
 - figma, other pages
 
-- zoom in head stone
 
 
 -nft.storage type of files 
 
 
 -highlighted bold icons on navbar
+
+### To do list
+- Make the readme complete with instructions and description of the work.
+
+- Change the criteria for dynamic pathname. 
+
+
+
 
 
 

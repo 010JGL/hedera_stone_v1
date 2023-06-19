@@ -5,7 +5,7 @@ import { db } from "@vercel/postgres";
 export async function POST(request) {
   const client = await db.connect();
   const res = await request.json();
-  console.log(`res:`, res);
+  
   
   const username = res.username;
   const name = res.name;

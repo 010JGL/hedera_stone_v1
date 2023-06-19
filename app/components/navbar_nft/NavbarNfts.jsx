@@ -40,7 +40,7 @@ const NavbarNfts = () => {
         </div>
         <div className="button-box">
           <Link href="/nfts/collection2">
-            <div className="button-text">Collection2</div>
+            <div className="button-text">3d test</div>
           </Link>
         </div>
       </div>

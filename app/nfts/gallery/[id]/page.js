@@ -21,8 +21,7 @@ export default function Specific() {
 
   // gets the pathname in the URL to load the right page
   const path = usePathname();
-  // gets the last char, will have problem after 2 chars
-  const id = path.at(-1);
+  const id = path.slice(14);
   //console.log(`id`, id);
 
   const loadNft = async () => {
