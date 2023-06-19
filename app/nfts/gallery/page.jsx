@@ -8,6 +8,8 @@ import { Card, Grid, Row, Text, Col } from "@nextui-org/react";
 
 import { Button } from "@nextui-org/react";
 
+import OneCard from "@/app/components/cards/OneCard";
+
 export default function Gallery() {
   const [words, setWords] = useState("");
   const [firstname, setFirstname] = useState("");
@@ -51,6 +53,7 @@ export default function Gallery() {
     });
 
     const data = await res.json();
+    console.log(`data:`, data);
 
     setNftsList(data);
   };
@@ -67,11 +70,10 @@ export default function Gallery() {
         {/* gap doesnt work, cant add paddin either??? wtf */}
         <Grid.Container gap={2} justify="center">
           {nftsList.map((item, index) => (
-            <OneCard/>
+            <OneCard data={item} key={index}></OneCard>
           ))}
         </Grid.Container>
       </div>
     </main>
   );
 }
-
