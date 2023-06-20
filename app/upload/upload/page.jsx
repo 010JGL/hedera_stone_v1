@@ -5,6 +5,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+
 export default function UploadForm() {
   const [words, setWords] = useState("BedTableDoor");
   const [firstname, setFirstname] = useState("John");
@@ -19,13 +20,19 @@ export default function UploadForm() {
   const [extras, setExtras] = useState(
     "Extras... Extras... Extras... Extras..."
   );
-  const [iconUrl, setIconUrl] = useState("https://bafybeifwnxnd46atsixewshki75gzrt5ukkpss2533rtijtmiuiwzodhyy.ipfs.nftstorage.link/")
+  const [iconUrl, setIconUrl] = useState(
+    "https://bafybeifwnxnd46atsixewshki75gzrt5ukkpss2533rtijtmiuiwzodhyy.ipfs.nftstorage.link/"
+  );
+
+  
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // validations
-    // Gotta add user.id from cookies? to keep track of who uploaded 
+    // Gotta add user.id from cookies? to keep track of who uploaded
 
     console.log(`inside handleSubmit upload`);
 
@@ -47,7 +54,7 @@ export default function UploadForm() {
         city,
         cemeteryname,
         extras,
-        iconUrl
+        iconUrl,
       }),
     });
 

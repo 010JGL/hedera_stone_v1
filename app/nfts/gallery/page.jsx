@@ -68,7 +68,7 @@ export default function Gallery() {
         {/* gap doesnt work, cant add paddin either??? wtf */}
         <Grid.Container gap={2} justify="center">
           {nftsList.map((item, index) => (
-            <Card css={{ w: "25%", h: "400px" }}>
+            <Card key={index} css={{ w: "25%", h: "400px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text h3 color="black">
