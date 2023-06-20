@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import Link from "next/link";
 
-import { Card, Grid, Row, Text, Button } from "@nextui-org/react";
+import { Card, Grid, Row, Text, Button, Col } from "@nextui-org/react";
 
 export default function Gallery() {
   const [words, setWords] = useState();
@@ -67,6 +67,18 @@ export default function Gallery() {
           {nftsList.map((item, index) => (
             <Grid xs={6} sm={3} key={index}>
               <Card isPressable>
+                <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+                  <Col>
+                    <Text
+                      size={16}
+                      weight="bold"
+                      transform="uppercase"
+                      color="white"
+                    >
+                      Example 2D images
+                    </Text>
+                  </Col>
+                </Card.Header>
                 <Card.Body css={{ p: 0 }}>
                   <Card.Image
                     src={item.iconurl}

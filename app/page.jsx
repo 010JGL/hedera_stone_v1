@@ -8,15 +8,15 @@ export default function Home() {
     <NextUIProvider>
       <main>
         <h1 className="title">
-          Welcome to HederaStone … Your family tree in three dimensions
+          HederaStone Temporary Page
         </h1>
-        <div>Click here if you want to upload photos</div>
+        <div>Click here to experience the first draft CTE website.</div>
         <div>
           <Button variant="outline-primary" href="/upload">
             Upload
           </Button>{" "}
         </div>
-        <div>Click here if you want to browse NFTs</div>
+        <div>Click here to experience the first draft SALES website.</div>
         <div>
           <Button variant="outline-primary" href="/nfts">
             Browse

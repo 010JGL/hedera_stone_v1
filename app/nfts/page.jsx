@@ -6,13 +6,10 @@ export default function Nfts() {
       <h1 className="title">
         Welcome to HederaStone … Your family tree in three dimensions
       </h1>
-      <div>83 mb</div>
       <div className="three-d-container">
         <ThreeD_image></ThreeD_image>
       </div>
       <div className="home-display">
-        <div>text</div>
-        <div>img</div>
       </div>
     </main>
   );

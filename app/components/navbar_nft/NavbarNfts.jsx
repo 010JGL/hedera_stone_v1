@@ -15,6 +15,11 @@ const NavbarNfts = (path) => {
     setCurrentPath(path);
   });
 
+  //gets the id to display Nav icons dynamicly
+  const id = path.props.slice(14);
+  const specificLink = `/nfts/gallery/${id}`
+
+
   return (
     <ul className="nav-container">
       <div className="nav-logo">
@@ -27,27 +32,33 @@ const NavbarNfts = (path) => {
         <div className="nav-message">The 3D Family Tree of the Future</div>
       </div>
       <div className="button-container">
-        <div className="button-box">
-          <Link href="/nfts/gallery">
+      <div className="button-box">
+          <Link href="/nfts">
+            {currentPath.props === specificLink && (
+              <div className="button-text">Home</div>
+            )}
             {currentPath.props === "/nfts/gallery" && (
-              <div className="button-text-focus">Gallery</div>
+              <div className="button-text">Home</div>
             )}
             {currentPath.props === "/nfts" && (
-              <div className="button-text">Gallery</div>
+              <div className="button-text-focus">Home</div>
             )}
             {currentPath.props === "/nfts/collection" && (
-              <div className="button-text">Gallery</div>
+              <div className="button-text">Home</div>
             )}
             {currentPath.props === "/nfts/search" && (
-              <div className="button-text">Gallery</div>
+              <div className="button-text">Home</div>
             )}
             {currentPath.props === "/nfts/collection2" && (
-              <div className="button-text">Gallery</div>
+              <div className="button-text">Home</div>
             )}
           </Link>
         </div>
         <div className="button-box">
           <Link href="/nfts/search">
+            {currentPath.props === specificLink && (
+              <div className="button-text">Search</div>
+            )}
             {currentPath.props === "/nfts/search" && (
               <div className="button-text-focus">Search</div>
             )}
@@ -66,7 +77,32 @@ const NavbarNfts = (path) => {
           </Link>
         </div>
         <div className="button-box">
+          <Link href="/nfts/gallery">
+            {currentPath.props === specificLink && (
+              <div className="button-text-focus">Gallery</div>
+            )}
+            {currentPath.props === "/nfts/gallery" && (
+              <div className="button-text-focus">Gallery</div>
+            )}
+            {currentPath.props === "/nfts" && (
+              <div className="button-text">Gallery</div>
+            )}
+            {currentPath.props === "/nfts/collection" && (
+              <div className="button-text">Gallery</div>
+            )}
+            {currentPath.props === "/nfts/search" && (
+              <div className="button-text">Gallery</div>
+            )}
+            {currentPath.props === "/nfts/collection2" && (
+              <div className="button-text">Gallery</div>
+            )}
+          </Link>
+        </div>
+        <div className="button-box">
           <Link href="/nfts/collection">
+             {currentPath.props === specificLink && (
+              <div className="button-text">Collection</div>
+            )}
             {currentPath.props === "/nfts/collection" && (
               <div className="button-text-focus">Collection</div>
             )}
@@ -81,25 +117,6 @@ const NavbarNfts = (path) => {
             )}
             {currentPath.props === "/nfts/collection2" && (
               <div className="button-text">Collection</div>
-            )}
-          </Link>
-        </div>
-        <div className="button-box">
-          <Link href="/nfts/collection2">
-            {currentPath.props === "/nfts/collection2" && (
-              <div className="button-text-focus">3d test</div>
-            )}
-            {currentPath.props === "/nfts/collection" && (
-              <div className="button-text">3d test</div>
-            )}
-            {currentPath.props === "/nfts" && (
-              <div className="button-text">3d test</div>
-            )}
-            {currentPath.props === "/nfts/search" && (
-              <div className="button-text">3d test</div>
-            )}
-            {currentPath.props === "/nfts/gallery" && (
-              <div className="button-text">3d test</div>
             )}
           </Link>
         </div>

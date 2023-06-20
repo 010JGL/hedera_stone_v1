@@ -118,6 +118,7 @@ Run `npm i @nextui-org/react`
 
 - Cant use the DROP TABLE or seeds for DB, gotta use Vercel website
 
+- Refactor NavBarUp 33-43 & 46-56
 
 
 ### Future to do list

@@ -71,7 +71,7 @@ export default function Specific() {
               src={iconUrl}
               objectFit="cover"
               width="100%"
-              height={400}
+              height={600}
               alt="Specific HeadStone"
             />
           </Card.Body>
