@@ -94,6 +94,12 @@ Run `npm install three @react-three/fiber`  &
 
 Run `npm i @nextui-org/react`
 
+# Install Hedera Hashgraph SDK
+
+Run `npm install --save @hashgraph/sdk`
+&
+Run `npm install dotenv` To save our keys
+
 
 
 
@@ -117,6 +123,10 @@ Run `npm i @nextui-org/react`
 - Make the readme complete with instructions and description of the work.
 
 - Cant use the DROP TABLE or seeds for DB, gotta use Vercel website
+
+- Variable names like data, data2 - 3 etc, change for something more descriptive0
+
+- Gallery fruits back
 
 
 
