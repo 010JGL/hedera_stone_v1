@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
 import { usePathname } from "next/navigation";
 
-import { Card, Col, Row, Button, Text, Table } from "@nextui-org/react";
+import { Card, Row, Button, Text, Table } from "@nextui-org/react";
 
 export default function Specific() {
   const [words, setWords] = useState("");
@@ -21,8 +22,8 @@ export default function Specific() {
 
   // gets the pathname in the URL to load the right page
   const path = usePathname();
+  // removes the "/nfts/gallery/" so i can get the id from URL
   const id = path.slice(14);
-  //console.log(`id`, id);
 
   const loadNft = async () => {
     // e.preventDefault();
@@ -39,21 +40,21 @@ export default function Specific() {
         id,
       }),
     });
+    // Returns * from the table
+    const results = await res.json();
 
-    const data3 = await res.json();
-    //console.log(`data3:`, data3);
-    setFirstname(data3.firstname);
-    setMiddlename(data3.middlename);
-    setSurname(data3.surname);
-    setDatebirth(data3.datebirth);
-    setDatedied(data3.datedied);
-    setCountry(data3.country);
-    setState(data3.state);
-    setCity(data3.city);
-    setCemeteryname(data3.cemeteryname);
-    setExtras(data3.extras);
-    setWords(data3.words);
-    setIconUrl(data3.iconurl);
+    setFirstname(results.firstname);
+    setMiddlename(results.middlename);
+    setSurname(results.surname);
+    setDatebirth(results.datebirth);
+    setDatedied(results.datedied);
+    setCountry(results.country);
+    setState(results.state);
+    setCity(results.city);
+    setCemeteryname(results.cemeteryname);
+    setExtras(results.extras);
+    setWords(results.words);
+    setIconUrl(results.iconurl);
   };
 
   useEffect(() => {
@@ -64,17 +65,14 @@ export default function Specific() {
     <main className="main">
       <h1 className="title">NFT specific page</h1>
       <div className="specific-card">
-        <Card css={{ w: "80%", h: "800px" }}>
-          <Card.Header
-            css={{ position: "absolute", zIndex: 1, top: 5 }}
-          ></Card.Header>
+        <Card isPressable>
           <Card.Body css={{ p: 0 }}>
             <Card.Image
               src={iconUrl}
               objectFit="cover"
               width="100%"
-              height="100%"
-              alt="Relaxing app background"
+              height={400}
+              alt="Specific HeadStone"
             />
           </Card.Body>
           <Card.Footer
@@ -87,36 +85,18 @@ export default function Specific() {
               zIndex: 1,
             }}
           >
-            <Row>
-              <Col>
-                <Row justify="flex-end">
-                  <Col>
-                    <Text
-                      size={14}
-                      weight="bold"
-                      transform="uppercase"
-                      color="white"
-                    >
-                      Price 5000 Hbars
-                    </Text>
-                  </Col>
-                  <Button
-                    flat
-                    auto
-                    rounded
-                    css={{ color: "#94f9f0", bg: "#94f9f026" }}
-                  >
-                    <Text
-                      css={{ color: "inherit" }}
-                      size={12}
-                      weight="bold"
-                      transform="uppercase"
-                    >
-                      Buy now
-                    </Text>
-                  </Button>
-                </Row>
-              </Col>
+            <Row wrap="wrap" justify="space-evenly" align="center">
+              <Text b>5000 HBAR</Text>
+              <Button flat auto rounded color="primary">
+                <Text
+                  css={{ color: "inherit" }}
+                  size={12}
+                  weight="bold"
+                  transform="uppercase"
+                >
+                  Buy
+                </Text>
+              </Button>
             </Row>
           </Card.Footer>
         </Card>

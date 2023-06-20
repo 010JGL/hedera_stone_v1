@@ -1,38 +1,70 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import Link from "next/link";
 
-import { Card, Grid, Row, Text, Col } from "@nextui-org/react";
+import { Card, Grid, Row, Text } from "@nextui-org/react";
 
 import { Button } from "@nextui-org/react";
 
-
 export default function SearchResult(searchResults) {
-
-  const [words, setWords] = useState("");
-  const [firstname, setFirstname] = useState("");
-  const [middlename, setMiddlename] = useState("");
-  const [surname, setSurname] = useState("");
-  const [datebirth, setDatebirth] = useState("");
-  const [datedied, setDatedied] = useState("");
-  const [country, setCountry] = useState("");
-  const [state, setState] = useState("");
-  const [city, setCity] = useState("");
-  const [cemeteryname, setCemeteryname] = useState("");
-  const [extras, setExtras] = useState("");
-  const [iconUrl, setIconUrl] = useState("");
-  const [nftsList, setNftsList] = useState([{}, {}, {}, {}]);
-  //console.log(`searchResults:`, searchResults)
-
-  const searchList = searchResults.list
-  
+  //Gets the results from the props
+  const searchList = searchResults.list;
 
   return (
     <main className="main">
       <h1 className="title">Search Results</h1>
-
       <div className="cards-container">
-        {/* gap doesnt work, cant add paddin either??? wtf */}
+        <Grid.Container gap={2} justify="flex-start">
+          {searchList.map((item, index) => (
+            <Grid xs={6} sm={3} key={index}>
+              <Card isPressable>
+                <Card.Body css={{ p: 0 }}>
+                  <Card.Image
+                    src={item.iconurl}
+                    objectFit="cover"
+                    width="100%"
+                    height={400}
+                    alt={item.firstname}
+                  />
+                </Card.Body>
+                <Card.Footer css={{ justifyItems: "flex-start" }}>
+                  <Row wrap="wrap" justify="space-evenly" align="center">
+                    <Text b>
+                      {item.datebirth}
+                      <br></br>
+                      {item.datedied}
+                    </Text>
+                    <Text b>
+                      {item.firstname}
+                      <br></br>
+                      {item.surname}
+                    </Text>
+                    <Link href={`/nfts/gallery/${item.id}`}>
+                      <Button flat auto rounded color="primary">
+                        <Text
+                          css={{ color: "inherit" }}
+                          size={12}
+                          weight="bold"
+                          transform="uppercase"
+                        >
+                          Open
+                        </Text>
+                      </Button>
+                    </Link>
+                  </Row>
+                </Card.Footer>
+              </Card>
+            </Grid>
+          ))}
+        </Grid.Container>
+      </div>
+    </main>
+  );
+}
+
+{
+  /* <div className="cards-container">
+        {/* gap doesnt work, cant add paddin either??? wtf *
         <Grid.Container gap={2} justify="center">
             {searchList.map((item, index) => (
               <Card key={index} css={{ w: "25%", h: "400px" }}>
@@ -103,7 +135,5 @@ export default function SearchResult(searchResults) {
               </Card>
             ))}
         </Grid.Container>
-      </div>
-    </main>
-  );
+        </div> */
 }
