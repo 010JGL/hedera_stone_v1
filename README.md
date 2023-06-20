@@ -129,7 +129,8 @@ Run `npm i @nextui-org/react`
 
 
 
-
+-----
+-Should we make the Image from nav bar priority={true} ?
 
 
 

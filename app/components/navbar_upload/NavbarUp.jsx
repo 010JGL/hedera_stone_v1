@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -9,7 +9,14 @@ import logo from "../../../public/images/HederaStoneLogo.jpg";
 import title from "../../../public/images/HederaStoneTitle.png";
 import Login from "../../../public/images/LoginIcon.png";
 
-const NavbarUp = () => {
+const NavbarUp = (path) => {
+  const [currentPath, setCurrentPath] = useState("");
+  useEffect(() => {
+    setCurrentPath(path);
+  });
+
+  console.log(`currentPath.props:`, currentPath.props);
+
   return (
     <ul className="nav-container">
       <div className="nav-logo">
@@ -24,12 +31,28 @@ const NavbarUp = () => {
       <div className="button-container">
         <div className="button-box">
           <Link href="/upload/upload">
-            <div className="button-text">Upload</div>
+            {currentPath.props === "/upload/upload" && (
+              <div className="button-text-focustwo">Upload</div>
+            )}
+            {currentPath.props === "/upload" && (
+              <div className="button-text">Upload</div>
+            )}
+            {currentPath.props === "/upload/signup" && (
+              <div className="button-text">Upload</div>
+            )}
           </Link>
         </div>
         <div className="button-box">
           <Link href="/upload/signup">
-            <div className="button-text">Sign Up</div>
+            {currentPath.props === "/upload/signup" && (
+              <div className="button-text-focustwo">Sign Up</div>
+            )}
+            {currentPath.props === "/upload" && (
+              <div className="button-text">Sign Up</div>
+            )}
+            {currentPath.props === "/upload/upload" && (
+              <div className="button-text">Sign Up</div>
+            )}
           </Link>
         </div>
       </div>

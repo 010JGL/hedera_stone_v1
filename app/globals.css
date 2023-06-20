@@ -1,3 +1,5 @@
+
+
 body {
   background-image: url('../public/images/background3.png');
   object-fit: cover;
@@ -62,13 +64,40 @@ a:active {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
+  color: white;
+  background-image: url("../public/images/Layer_1.png");
+  width: 110px;
+  height: 36px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.button-text-focus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
   color: white;
   background-image: url("../public/images/Layer_1.png");
   width: 100px;
-  height: 32px;
+  height: 36px;
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 6px 6px 4px lightblue;
+}
+.button-text-focustwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  color: white;
+  background-image: url("../public/images/Layer_1.png");
+  width: 100px;
+  height: 36px;
+  background-size: cover;
+  border: 3px solid white;
 }
 .button-container {
   display: flex;
