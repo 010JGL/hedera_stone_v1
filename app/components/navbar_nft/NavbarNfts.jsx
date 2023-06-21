@@ -10,6 +10,7 @@ import { Button } from "@nextui-org/react";
 import logo from "../../../public/images/HederaStoneLogo.jpg";
 import title from "../../../public/images/HederaStoneTitle.png";
 import wallet from "../../../public/images/WalletIcon.png";
+import bladewallet from "../../../public/images/bladewallet.png";
 
 import { BladeSigner, HederaNetwork } from "@bladelabs/blade-web3.js";
 
@@ -25,7 +26,7 @@ const NavbarNfts = (path) => {
   async function initBlade() {
     const bladeSigner = new BladeSigner();
     const params = {
-      network: HederaNetwork.Mainnet,
+      network: HederaNetwork.Testnet,
       // dAppCode - optional while testing, request specific one by contacting us.
       dAppCode: "yourAwesomeApp",
     };
@@ -33,8 +34,9 @@ const NavbarNfts = (path) => {
     await bladeSigner.createSession(params);
 
     // bladeSigner object can now be used.
-    //bladeSigner.getAccountId();
-    console.log(`bladeSigner.getAccountId()`, bladeSigner.getAccountId())
+    bladeSigner.getAccountId();
+    console.log(`bladeSigner.getAccountId().toString()`, bladeSigner.getAccountId().toString())
+    bladeSigner.getAccountId().toString()
   }
 
   return (
@@ -139,7 +141,7 @@ const NavbarNfts = (path) => {
         </div>
       </div>
       <div className="button-icon">
-        <Image src={wallet} width={50} height={50} alt="Login button" />
+        <Image src={bladewallet} width={160} height={100} alt="Login button" />
         <div className="button-wallet">
           <Button
             color="gradient"

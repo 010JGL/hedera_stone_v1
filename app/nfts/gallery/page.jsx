@@ -66,55 +66,36 @@ export default function Gallery() {
         <Grid.Container gap={2} justify="flex-start">
           {nftsList.map((item, index) => (
             <Grid xs={6} sm={3} key={index}>
-              <Card isPressable>
-                <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
-                  <Col>
-                    <Text
-                      size={16}
-                      weight="bold"
-                      transform="uppercase"
-                      color="white"
-                    >
-                      Example 2D images
-                    </Text>
-                  </Col>
-                </Card.Header>
-                <Card.Body css={{ p: 0 }}>
-                  <Card.Image
-                    src={item.iconurl}
-                    objectFit="cover"
-                    width="100%"
-                    height={400}
-                    alt={item.firstname}
-                  />
-                </Card.Body>
-                <Card.Footer css={{ justifyItems: "flex-start" }}>
-                  <Row wrap="wrap" justify="space-between" align="center">
-                    <Text b>
-                      {item.datebirth}
-                      <br></br>
-                      {item.datedied}
-                    </Text>
-                    <Text b>
-                      {item.firstname}
-                      <br></br>
-                      {item.surname}
-                    </Text>
-                    <Link href={`/nfts/gallery/${item.id}`}>
-                      <Button flat auto rounded color="primary">
-                        <Text
-                          css={{ color: "inherit" }}
-                          size={12}
-                          weight="bold"
-                          transform="uppercase"
-                        >
-                          Open
-                        </Text>
-                      </Button>
-                    </Link>
-                  </Row>
-                </Card.Footer>
-              </Card>
+              <Text size={16} weight="bold" transform="uppercase" color="white">
+                Example 2D images
+              </Text>
+              <Link href={`/nfts/gallery/${item.id}`}>
+                <Card isPressable>
+                  <Card.Body css={{ p: 0 }}>
+                    <Card.Image
+                      src={item.iconurl}
+                      objectFit="cover"
+                      width="100%"
+                      height={400}
+                      alt={item.firstname}
+                    />
+                  </Card.Body>
+                  <Card.Footer css={{ justifyItems: "flex-start" }}>
+                    <Row wrap="wrap" justify="space-between" align="center">
+                      <Text b>
+                        {item.datebirth}
+                        <br></br>
+                        {item.datedied}
+                      </Text>
+                      <Text b>
+                        {item.firstname}
+                        <br></br>
+                        {item.surname}
+                      </Text>
+                    </Row>
+                  </Card.Footer>
+                </Card>
+              </Link>
             </Grid>
           ))}
         </Grid.Container>

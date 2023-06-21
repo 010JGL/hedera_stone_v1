@@ -1,14 +1,11 @@
-
-
-body {
-  background-image: url('../public/images/background3.png');
-  object-fit: cover;
+ul {
+  background-color: black;
   color: white;
 }
 main {
   color:white;
+  background-color: black;
 }
-
 a:link {
   text-decoration: none;
 }
@@ -41,6 +38,7 @@ a:active {
 .nav-container {
   display: flex;
   flex-direction: row;
+  margin-bottom: 0px;
 }
 .nav-logo {
   padding-top: 30px;
@@ -125,7 +123,6 @@ a:active {
   padding-right: 40px;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
 }
 .button-icon-text {
   padding-top: 10px;
@@ -146,21 +143,26 @@ a:active {
 .cards-container {
   padding-left: 2rem;
   padding-right: 2rem;
-  margin-top: 2rem;
+  padding-top: 5rem;
 }
 .title {
   display: flex;
   justify-content: center;
+  margin-bottom: 0px;
+  padding-top: 3rem;
 }
 .form-container {
+  padding-top: 5rem;
   margin-left: 2rem;
   width:33%;
 }
-.main { 
-  min-height: 2000px;
-}
 .footer-box {
-  display: flex;
+  background-color: black;
+  background-image: url("../public/images/Website_footer2.png");
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .footer-icons {
   display: flex;
@@ -220,6 +222,10 @@ a:active {
 .intro-btn {
   height: 4rem;
 }
-.button-wallet {
-  padding-top: 1rem;
+.nextui-c-kRHeuF-ifdaEcH-css.sm {
+  flex-direction: column;
+}
+.three-d-container {
+  padding-top: 3rem;
+  height: 700px;
 }

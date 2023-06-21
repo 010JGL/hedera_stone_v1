@@ -32,10 +32,7 @@ const NavbarUp = (path) => {
         <div className="button-box">
           <Link href="/upload/upload">
             {currentPath.props === "/upload/upload" && (
-              <div className="button-text-focustwo">Upload</div>
-            )}
-            {currentPath.props === "/upload" && (
-              <div className="button-text">Upload</div>
+              <div className="button-text-focus">Upload</div>
             )}
             {currentPath.props === "/upload/signup" && (
               <div className="button-text">Upload</div>
@@ -48,10 +45,7 @@ const NavbarUp = (path) => {
         <div className="button-box">
           <Link href="/upload/signup">
             {currentPath.props === "/upload/signup" && (
-              <div className="button-text-focustwo">Sign Up</div>
-            )}
-            {currentPath.props === "/upload" && (
-              <div className="button-text">Sign Up</div>
+              <div className="button-text-focus">Sign Up</div>
             )}
             {currentPath.props === "/upload/upload" && (
               <div className="button-text">Sign Up</div>

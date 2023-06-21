@@ -12,7 +12,7 @@ export default function Home() {
         </h1>
         <div className="intro">Click here to experience the first draft CTE website.</div>
         <div className="intro-btn">
-          <Button variant="outline-primary" href="/upload" size="lg">
+          <Button variant="outline-primary" href="/upload/login" size="lg">
             Upload
           </Button>{" "}
         </div>
