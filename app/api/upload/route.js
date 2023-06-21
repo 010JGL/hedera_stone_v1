@@ -1,10 +1,16 @@
 import { NextResponse } from "next/server";
 import { db } from "@vercel/postgres";
+import {
+  AccountId,
+  Client,
+  PublicKey,
+  TokenCreateTransaction,
+  TokenType,
+} from "@hashgraph/sdk";
 
 export async function POST(request) {
-  const client = await db.connect();
+  const sqlClient = await db.connect();
   const res = await request.json();
-  
 
   const words = res.words;
   const firstname = res.firstname;
@@ -20,11 +26,37 @@ export async function POST(request) {
   const iconUrl = res.iconUrl;
   // Validations here for same Username
 
-  
+  let success = true;
   const newUpload =
-    await client.sql`INSERT INTO nfts (words, firstname, middlename, surname, datebirth, datedied, country, state, city, cemeteryname, extras, iconUrl) VALUES (${words}, ${firstname}, ${middlename}, ${surname}, ${datebirth}, ${datedied}, ${country}, ${state}, ${city}, ${cemeteryname}, ${extras}, ${iconUrl});`;
+    await sqlClient.sql`INSERT INTO nfts (words, firstname, middlename, surname, datebirth, datedied, country, state, city, cemeteryname, extras, iconUrl) VALUES (${words}, ${firstname}, ${middlename}, ${surname}, ${datebirth}, ${datedied}, ${country}, ${state}, ${city}, ${cemeteryname}, ${extras}, ${iconUrl});`.catch(
+      (err) => {
+        console.log(err);
+        success = false;
+      }
+    );
   //console.log(`newUpload`, newUpload);
-  const sendData = { ...res, success: true };
+
+  if (success) {
+    // create a new NFT
+    const hederaClient = Client.forTestnet().setOperator(
+      process.env.HS_TREASURY,
+      process.env.HS_PRIVATE_KEY
+    );
+    const tokenCreateTx = new TokenCreateTransaction()
+      .setTokenName(`${firstname} ${surname}`)
+      .setTokenType(TokenType.NonFungibleUnique)
+      .setTokenSymbol(process.env.HS_SYMBOL)
+      .setTreasuryAccountId(AccountId.fromString(process.env.HS_TREASURY))
+      .setSupplyKey(PublicKey.fromString(process.env.HS_PUBLIC_KEY))
+      .freezeWith(hederaClient);
+
+    const tokenCreateSubmit = await tokenCreateTx.execute(hederaClient);
+    const tokenCreateReceipt = await tokenCreateSubmit.getReceipt(hederaClient);
+    const tokenId = tokenCreateReceipt.tokenId.toString();
+    console.log("Token ID: ", tokenId);
+  }
+
+  const sendData = { ...res, success };
 
   return NextResponse.json(sendData);
 }
