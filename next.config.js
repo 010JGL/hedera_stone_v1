@@ -5,4 +5,6 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+const withTM = require('next-transpile-modules')(['@bladelabs/blade-web3.js']);
+module.exports = nextConfig, withTM({});
+
