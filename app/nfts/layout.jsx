@@ -7,7 +7,6 @@ import NavbarNfts from "../components/navbar_nft/NavbarNfts";
 
 export default function NftsLayout({ children }) {
   const path = usePathname();
-  console.log(`path:`, path);
 
   return (
     <section>

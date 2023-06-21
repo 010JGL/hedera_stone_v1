@@ -5,20 +5,37 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { Button } from "@nextui-org/react";
+
 import logo from "../../../public/images/HederaStoneLogo.jpg";
 import title from "../../../public/images/HederaStoneTitle.png";
 import wallet from "../../../public/images/WalletIcon.png";
+
+import { BladeSigner, HederaNetwork } from "@bladelabs/blade-web3.js";
 
 const NavbarNfts = (path) => {
   const [currentPath, setCurrentPath] = useState("");
   useEffect(() => {
     setCurrentPath(path);
   });
-
   //gets the id to display Nav icons dynamicly
   const id = path.props.slice(14);
-  const specificLink = `/nfts/gallery/${id}`
+  const specificLink = `/nfts/gallery/${id}`;
 
+  async function initBlade() {
+    const bladeSigner = new BladeSigner();
+    const params = {
+      network: HederaNetwork.Mainnet,
+      // dAppCode - optional while testing, request specific one by contacting us.
+      dAppCode: "yourAwesomeApp",
+    };
+    // create session with optional parameters.
+    await bladeSigner.createSession(params);
+
+    // bladeSigner object can now be used.
+    //bladeSigner.getAccountId();
+    console.log(`bladeSigner.getAccountId()`, bladeSigner.getAccountId())
+  }
 
   return (
     <ul className="nav-container">
@@ -32,7 +49,7 @@ const NavbarNfts = (path) => {
         <div className="nav-message">The 3D Family Tree of the Future</div>
       </div>
       <div className="button-container">
-      <div className="button-box">
+        <div className="button-box">
           <Link href="/nfts">
             {currentPath.props === specificLink && (
               <div className="button-text">Home</div>
@@ -100,7 +117,7 @@ const NavbarNfts = (path) => {
         </div>
         <div className="button-box">
           <Link href="/nfts/collection">
-             {currentPath.props === specificLink && (
+            {currentPath.props === specificLink && (
               <div className="button-text">Collection</div>
             )}
             {currentPath.props === "/nfts/collection" && (
@@ -122,10 +139,18 @@ const NavbarNfts = (path) => {
         </div>
       </div>
       <div className="button-icon">
-        <Link href="/upload/login">
-          <Image src={wallet} width={50} height={50} alt="Login button" />
-        </Link>
-        <div className="button-icon-text">Connect Blade Wallet</div>
+        <Image src={wallet} width={50} height={50} alt="Login button" />
+        <div className="button-wallet">
+          <Button
+            color="gradient"
+            auto
+            onClick={(e) => {
+              initBlade();
+            }}
+          >
+            Connect Blade Wallet
+          </Button>
+        </div>
       </div>
     </ul>
   );

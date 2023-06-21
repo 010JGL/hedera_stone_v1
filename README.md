@@ -94,6 +94,14 @@ Run `npm install three @react-three/fiber`  &
 
 Run `npm i @nextui-org/react`
 
+# Install Blade wallet 
+
+Run `npm i @bladelabs/blade-web3.js`
+&
+Run `npm install next-transpile-modules`
+&
+Run `npm install ngrok`
+
 
 
 
