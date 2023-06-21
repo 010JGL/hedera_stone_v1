@@ -203,3 +203,20 @@ a:active {
 .nextui-c-hWZRae-bzEnZV-borderWeight-normal {
   width: 1600px;
 }
+.homepage {
+  height: 1200px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 3rem;
+}
+.intro {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: x-large;
+}
+.intro-btn {
+  height: 4rem;
+}
