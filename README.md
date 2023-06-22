@@ -108,6 +108,12 @@ Run `npm install nft.storage`
 & 
 Run `npm install mime`
 
+# Install Cypress
+
+Run `npm install --save-dev cypress`
+&
+Add `"cypress": "cypress open"` to scripts in package.json
+
 
 
 

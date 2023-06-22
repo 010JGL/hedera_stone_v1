@@ -9,7 +9,6 @@ import { Button } from "@nextui-org/react";
 
 import logo from "../../../public/images/HederaStoneLogo.jpg";
 import title from "../../../public/images/HederaStoneTitle.png";
-import wallet from "../../../public/images/WalletIcon.png";
 import bladewallet from "../../../public/images/bladewallet.png";
 
 import { BladeSigner, HederaNetwork } from "@bladelabs/blade-web3.js";
