@@ -24,11 +24,13 @@ export async function POST(request) {
   const cemeteryname = res.cemeteryname;
   const extras = res.extras;
   const iconUrl = res.iconUrl;
+  const tokenId = res.tokenId;
+  const metadata = res.metadata;
   // Validations here for same Username
 
   let success = true;
   const newUpload =
-    await sqlClient.sql`INSERT INTO nfts (words, firstname, middlename, surname, datebirth, datedied, country, state, city, cemeteryname, extras, iconUrl) VALUES (${words}, ${firstname}, ${middlename}, ${surname}, ${datebirth}, ${datedied}, ${country}, ${state}, ${city}, ${cemeteryname}, ${extras}, ${iconUrl});`.catch(
+    await sqlClient.sql`INSERT INTO nfts (words, firstname, middlename, surname, datebirth, datedied, country, state, city, cemeteryname, extras, iconUrl, tokenId, metadata) VALUES (${words}, ${firstname}, ${middlename}, ${surname}, ${datebirth}, ${datedied}, ${country}, ${state}, ${city}, ${cemeteryname}, ${extras}, ${iconUrl}, ${tokenId}, ${metadata});`.catch(
       (err) => {
         console.log(err);
         success = false;
