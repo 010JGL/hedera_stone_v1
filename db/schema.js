@@ -18,5 +18,12 @@ import { sql } from "@vercel/postgres";
     cemeteryname VARCHAR(255) NOT NULL,
     extras VARCHAR(255) NOT NULL,
     iconUrl VARCHAR(255) NOT NULL,
+    tokenId VARCHAR(255) NOT NULL,
+    metadata VARCHAR(255) NOT NULL,
     date TIMESTAMP
     );`;
+
+// New version 
+await sqlClient.sqlINSERT INTO nfts 
+(words, firstname, middlename, surname, datebirth, datedied, country, state, city, cemeteryname, extras, iconUrl, tokenId)
+ VALUES (${words}, ${firstname}, ${middlename}, ${surname}, ${datebirth}, ${datedied}, ${country}, ${state}, ${city}, ${cemeteryname}, ${extras}, ${iconUrl}, ${tokenId});
