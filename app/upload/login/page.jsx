@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -8,15 +8,15 @@ import { handleSubmit } from "./actions";
 export default function Login() {
   // const [email, setEmail] = useState("jay@cool.slm");
   // const [password, setPassword] = useState("hello123");
-
-  const [message, SetMessage] = useState('');
-
   
+  const [results, setResults] = useState('');
+
+   
   return (
     <main className="main">
       <h1 className="title">Login here</h1>
       <div className="form-container">
-        <Form onSubmit={handleSubmit} >
+        <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control

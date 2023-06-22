@@ -1,3 +1,10 @@
+"use client";
+import React, { useEffect, useState } from "react";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 export const handleSubmit = async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
@@ -7,7 +14,19 @@ export const handleSubmit = async (e) => {
     password: formData.get("password"),
   };
 
-  //console.log("Do something with this data", data);
+    // for the Pop up
+    const notify = () =>
+    toast.success("You are Signed Up!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+
   const currentEmail = data.email;
   const currentPass = data.password;
   //console.log(`currentPass:`, currentPass)
@@ -25,13 +44,14 @@ export const handleSubmit = async (e) => {
 
   // returns an empty object if password doesnt match
   const data2 = await res.json();
-  console.log(`data2:`, data2);
+  //console.log(`data2:`, data2);
   // checks if object empty
   if (Object.keys(data2).length < 1) {
     alert(`Wrong password`);
   } else {
     // login logic here
-    console.log(`login success`);
     alert(`Login success`)
+    return data2
   }
+  
 };
