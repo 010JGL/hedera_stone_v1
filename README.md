@@ -122,11 +122,6 @@ Add `"cypress": "cypress open"` to scripts in package.json
 -3d image loading time           PRELOAD IT
 -Login feature, use bcrypt? yes
 
-- add one background image or cut it for the footer and have the rest back
-
-- figma, other pages
-
-
 
 -nft.storage type of files 
 
@@ -138,8 +133,9 @@ Add `"cypress": "cypress open"` to scripts in package.json
 
 - Cant use the DROP TABLE or seeds for DB, gotta use Vercel website
 
-- Refactor NavBarUp 33-43 & 46-56
+- Make components to show that we have signed up and loggin 
 
+- Testing the API 
 
 ### Future to do list
 

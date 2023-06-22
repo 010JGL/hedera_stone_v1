@@ -34,27 +34,27 @@ export async function POST(request) {
         success = false;
       }
     );
-  //console.log(`newUpload`, newUpload);
+  console.log(`newUpload`, newUpload);
 
-  if (success) {
-    // create a new NFT
-    const hederaClient = Client.forTestnet().setOperator(
-      process.env.HS_TREASURY,
-      process.env.HS_PRIVATE_KEY
-    );
-    const tokenCreateTx = new TokenCreateTransaction()
-      .setTokenName(`${firstname} ${surname}`)
-      .setTokenType(TokenType.NonFungibleUnique)
-      .setTokenSymbol(process.env.HS_SYMBOL)
-      .setTreasuryAccountId(AccountId.fromString(process.env.HS_TREASURY))
-      .setSupplyKey(PublicKey.fromString(process.env.HS_PUBLIC_KEY))
-      .freezeWith(hederaClient);
+  // if (success) {
+  //   // create a new NFT
+  //   const hederaClient = Client.forTestnet().setOperator(
+  //     process.env.HS_TREASURY,
+  //     process.env.HS_PRIVATE_KEY
+  //   );
+  //   const tokenCreateTx = new TokenCreateTransaction()
+  //     .setTokenName(`${firstname} ${surname}`)
+  //     .setTokenType(TokenType.NonFungibleUnique)
+  //     .setTokenSymbol(process.env.HS_SYMBOL)
+  //     .setTreasuryAccountId(AccountId.fromString(process.env.HS_TREASURY))
+  //     .setSupplyKey(PublicKey.fromString(process.env.HS_PUBLIC_KEY))
+  //     .freezeWith(hederaClient);
 
-    const tokenCreateSubmit = await tokenCreateTx.execute(hederaClient);
-    const tokenCreateReceipt = await tokenCreateSubmit.getReceipt(hederaClient);
-    const tokenId = tokenCreateReceipt.tokenId.toString();
-    console.log("Token ID: ", tokenId);
-  }
+  //   const tokenCreateSubmit = await tokenCreateTx.execute(hederaClient);
+  //   const tokenCreateReceipt = await tokenCreateSubmit.getReceipt(hederaClient);
+  //   const tokenId = tokenCreateReceipt.tokenId.toString();
+  //   console.log("Token ID: ", tokenId);
+  // }
 
   const sendData = { ...res, success };
 
