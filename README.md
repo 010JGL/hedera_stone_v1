@@ -102,6 +102,12 @@ Run `npm install next-transpile-modules`
 &
 Run `npm install ngrok`
 
+# Install Nft.Storage package
+
+Run `npm install nft.storage`
+& 
+Run `npm install mime`
+
 
 
 

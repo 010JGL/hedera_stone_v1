@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 export default function UploadForm() {
+
   const [words, setWords] = useState("BedTableDoor");
   const [firstname, setFirstname] = useState("John");
   const [middlename, setMiddlename] = useState("Alex");
@@ -19,13 +20,20 @@ export default function UploadForm() {
   const [extras, setExtras] = useState(
     "Extras... Extras... Extras... Extras..."
   );
-  const [iconUrl, setIconUrl] = useState("https://bafybeifwnxnd46atsixewshki75gzrt5ukkpss2533rtijtmiuiwzodhyy.ipfs.nftstorage.link/")
+  const [iconUrl, setIconUrl] = useState(
+    "https://bafybeifwnxnd46atsixewshki75gzrt5ukkpss2533rtijtmiuiwzodhyy.ipfs.nftstorage.link/"
+  );
+  const [imageFile, SetImageFile] = useState("");
 
+
+  const handleImage = async (e) => {
+    
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // validations
-    // Gotta add user.id from cookies? to keep track of who uploaded 
+    // Gotta add user.id from cookies? to keep track of who uploaded
 
     console.log(`inside handleSubmit upload`);
 
@@ -47,7 +55,7 @@ export default function UploadForm() {
         city,
         cemeteryname,
         extras,
-        iconUrl
+        iconUrl,
       }),
     });
 
@@ -169,6 +177,10 @@ export default function UploadForm() {
               name="extras"
               placeholder="Extras"
             />
+          </Form.Group>
+          <Form.Group controlId="formFile" className="mb-3">
+            <Form.Label>Default file input example</Form.Label>
+            <Form.Control type="file" value={imageFile} />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicIconUrl">
             <Form.Label>CID URL</Form.Label>
