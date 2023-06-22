@@ -5,10 +5,10 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 export default function SignUp() {
-  const [username, setUsername] = useState("jaycool");
-  const [name, setName] = useState("Jay Cool");
-  const [email, setEmail] = useState("jay@cool.slm");
-  const [password, setPassword] = useState("hello123");
+  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [role, setRole] = useState("basic");
 
   const handleSubmit = async (e) => {
@@ -32,7 +32,8 @@ export default function SignUp() {
     });
 
     const data = await res.json();
-    //console.log(data);
+    console.log(data);
+    alert(`You have Signed Up`)
   };
   return (
     <main className="main">

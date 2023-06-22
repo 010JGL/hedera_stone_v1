@@ -22,7 +22,7 @@ export default function Login() {
               name="email"
               placeholder="Enter email"
               // onChange={(e) => setEmail(e.target.value)}
-              defaultValue="jay@cool.slm"
+              //defaultValue="jay@cool.slm"
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -32,7 +32,7 @@ export default function Login() {
               name="password"
               placeholder="Password"
               // onChange={(e) => setPassword(e.target.defaultValue)}
-              defaultValue="hello123"
+              //defaultValue="hello123"
             />
           </Form.Group>
           <Button variant="primary" type="submit" >

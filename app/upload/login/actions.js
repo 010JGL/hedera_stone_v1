@@ -32,5 +32,6 @@ export const handleSubmit = async (e) => {
   } else {
     // login logic here
     console.log(`login success`);
+    alert(`Login success`)
   }
 };
