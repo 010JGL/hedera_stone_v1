@@ -272,3 +272,11 @@ a:active {
   background-position: center;
   height: 600px;
 }
+.middle-image {
+  background-image: url("../public/images/HP3.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 468px;
+  width: 832px;
+}

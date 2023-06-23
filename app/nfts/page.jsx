@@ -5,7 +5,6 @@ import { StrictMode } from "react";
 import ThreeD_image from "../components/3d_image/threed_image";
 
 import VideoPlayer from "../components/video/video";
-import Image from "next/image";
 
 
 export default function Nfts() {
@@ -37,12 +36,6 @@ export default function Nfts() {
       </div>
       <div className="middle-box">
         <div className="middle-image">
-          <Image
-            src="../../public/images/HP3.JPG"
-            width={832}
-            height={468}
-            alt="Picture of a HeadtStone"
-          ></Image>
         </div>
         <div className="middle-text">
           We dont just have one image of each<br></br> memorial, we jave at
