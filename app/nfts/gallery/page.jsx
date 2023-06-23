@@ -6,6 +6,8 @@ import Link from "next/link";
 
 import { Card, Grid, Row, Text, Button, Col } from "@nextui-org/react";
 
+import Small_3d from "@/app/components/3d_image/small_3d";
+
 export default function Gallery() {
   const [words, setWords] = useState();
   const [firstname, setFirstname] = useState();
@@ -96,6 +98,10 @@ export default function Gallery() {
                   </Card.Footer>
                 </Card>
               </Link>
+              <Text size={16} weight="bold" transform="uppercase" color="white">
+                Example 3D images
+              </Text>
+              <Small_3d></Small_3d>
             </Grid>
           ))}
         </Grid.Container>

@@ -25,7 +25,8 @@ export default function ThreeD_image() {
           speed={1.2}
           global
           zoom={6}
-          polar={[0.1, Math.PI / 2]}
+          polar={[0, Math.PI / 2]}
+          rotation={[0, 4.6, 0]}
         >
           <Stage environment={null}>
             <Model scale={0.01} />
