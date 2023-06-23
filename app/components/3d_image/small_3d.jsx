@@ -13,12 +13,12 @@ function Model(props) {
 
 export default function Small_3d() {
   return (
-    <div className="threed-image-container">
+    <div className="threed-image-container-small">
       <Canvas
         dpr={[1, 2]}
         shadows
         camera={{ fov: 45 }}
-        style={{ position: "static", near: 0.1, height: "500px", width: "400px" }}
+        style={{ position: "center", height: "400px", width: "300px" }}
       >
         <color attach="background" args={["#101010"]} />
         <PresentationControls

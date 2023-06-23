@@ -29,7 +29,7 @@ export default function Nfts() {
         Welcome to HederaStone … Your family tree in three dimensions
       </h1>
       <div className="three-d-container">
-        {/* <ThreeD_image></ThreeD_image> */}
+        <ThreeD_image></ThreeD_image>
       </div>
       <div className="home-display"></div>
       <div className="video-box">

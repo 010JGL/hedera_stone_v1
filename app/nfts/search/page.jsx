@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import SearchResult from "@/app/components/searchResult/searchResult";
+import SearchResult from "../../components/searchResult/searchResult";
 
 import { Form, Button } from "react-bootstrap";
 
