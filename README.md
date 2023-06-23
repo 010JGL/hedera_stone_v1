@@ -118,6 +118,13 @@ Add `"cypress": "cypress open"` to scripts in package.json
 
 Run `npm install --save react-toastify`
 
+# Install react-player
+
+Run `npm i react-player`
+
+# Install react-native-video
+
+Run `npm install --save react-native-video`
 
 
 

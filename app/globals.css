@@ -233,3 +233,43 @@ a:active {
   height:300px;
   background-color: black;
 }
+.video-box {
+  display: flex;
+  justify-content: center;
+}
+.middle-box {
+  padding: 5rem 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.middle-text {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  min-width: 50%;
+  text-align: center;
+  font-size: 2rem;
+}
+.top-picture {
+  background-image: url("../public/images/HP5.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 600px;
+}
+.middle-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+}
+.bot-image {
+  background-image: url("../public/images/HP5.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 600px;
+}

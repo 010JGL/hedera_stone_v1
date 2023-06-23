@@ -18,7 +18,7 @@ export default function ThreeD_image() {
         dpr={[1, 2]}
         shadows
         camera={{ fov: 45 }}
-        style={{ position: "absolute", height: "600px", width: "1000px" }}
+        style={{ position: "absolute", height: "600px", width: "1800px" }}
       >
         <color attach="background" args={["#101010"]} />
         <PresentationControls
