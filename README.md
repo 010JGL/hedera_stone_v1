@@ -114,8 +114,17 @@ Run `npm install --save-dev cypress`
 &
 Add `"cypress": "cypress open"` to scripts in package.json
 
+# Install Tostify
 
+Run `npm install --save react-toastify`
 
+# Install react-player
+
+Run `npm i react-player`
+
+# Install react-native-video
+
+Run `npm install --save react-native-video`
 
 
 
@@ -134,6 +143,8 @@ Add `"cypress": "cypress open"` to scripts in package.json
 - Cant use the DROP TABLE or seeds for DB, gotta use Vercel website
 
 - Make components to show that we have signed up and loggin 
+
+- Change the naming of links / folder so it doesnt confuse in the URL
 
 - Testing the API 
 

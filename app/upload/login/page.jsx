@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -8,8 +8,10 @@ import { handleSubmit } from "./actions";
 export default function Login() {
   // const [email, setEmail] = useState("jay@cool.slm");
   // const [password, setPassword] = useState("hello123");
-
   
+  const [results, setResults] = useState('');
+
+   
   return (
     <main className="main">
       <h1 className="title">Login here</h1>
@@ -22,7 +24,7 @@ export default function Login() {
               name="email"
               placeholder="Enter email"
               // onChange={(e) => setEmail(e.target.value)}
-              //defaultValue="jay@cool.slm"
+              defaultValue="jay@cool.slm"
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -32,7 +34,7 @@ export default function Login() {
               name="password"
               placeholder="Password"
               // onChange={(e) => setPassword(e.target.defaultValue)}
-              //defaultValue="hello123"
+              defaultValue="hello123"
             />
           </Form.Group>
           <Button variant="primary" type="submit" >
