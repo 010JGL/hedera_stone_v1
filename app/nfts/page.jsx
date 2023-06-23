@@ -7,7 +7,6 @@ import ThreeD_image from "../components/3d_image/threed_image";
 import VideoPlayer from "../components/video/video";
 import Image from "next/image";
 
-import hp3 from "../../public/images/HP3.JPG";
 
 export default function Nfts() {
   const hp1 = {
@@ -39,7 +38,7 @@ export default function Nfts() {
       <div className="middle-box">
         <div className="middle-image">
           <Image
-            src={hp3}
+            src="../../public/images/HP3.JPG"
             width={832}
             height={468}
             alt="Picture of a HeadtStone"
