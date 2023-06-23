@@ -2,10 +2,9 @@
 
 import { StrictMode } from "react";
 
-import ThreeD_image from "../components/3d_image/threed_image";
+// import ThreeD_image from "../components/3d_image/threed_image";
 
 import VideoPlayer from "../components/video/video";
-
 
 export default function Nfts() {
   const hp1 = {
@@ -26,7 +25,7 @@ export default function Nfts() {
         Welcome to HederaStone … Your family tree in three dimensions
       </h1>
       <div className="three-d-container">
-        <ThreeD_image></ThreeD_image>
+        {/* <ThreeD_image></ThreeD_image> */}
       </div>
       <div className="home-display"></div>
       <div className="video-box">
@@ -35,8 +34,7 @@ export default function Nfts() {
         </StrictMode>
       </div>
       <div className="middle-box">
-        <div className="middle-image">
-        </div>
+        <div className="middle-image"></div>
         <div className="middle-text">
           We dont just have one image of each<br></br> memorial, we jave at
           least 20.
