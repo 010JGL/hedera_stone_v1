@@ -7,7 +7,7 @@ import { PresentationControls, useGLTF, Stage } from "@react-three/drei";
 import {} from "three/examples/jsm/controls/OrbitControls";
 
 function Model(props) {
-  const { scene } = useGLTF("/Grave24GLB.glb");
+  const { scene } = useGLTF("/Grave_20_website.glb");
   return <primitive object={scene} {...props} />;
 }
 
@@ -24,8 +24,8 @@ export default function ThreeD_image() {
         <PresentationControls
           speed={1.2}
           global
-          zoom={10}
-          polar={[-0.1, Math.PI / 10]}
+          zoom={6}
+          polar={[0.1, Math.PI / 2]}
         >
           <Stage environment={null}>
             <Model scale={0.01} />
