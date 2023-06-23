@@ -29,7 +29,7 @@ export default function Nfts() {
         Welcome to HederaStone … Your family tree in three dimensions
       </h1>
       <div className="three-d-container">
-        <ThreeD_image></ThreeD_image>
+        {/* <ThreeD_image></ThreeD_image> */}
       </div>
       <div className="home-display"></div>
       <div className="video-box">
@@ -83,13 +83,17 @@ export default function Nfts() {
       </div>
       <div className="links-box">
         <div className="link-box">
-          <div className="link-box-text">How to search for <br></br> an ancestor</div>
+          <div className="link-box-text">
+            How to search for <br></br> an ancestor
+          </div>
           <Link href="/nfts/search">
             <div className="button-text">Search</div>
           </Link>
         </div>
         <div className="link-box">
-          <div className="link-box-text">Some other <br></br> examples</div>
+          <div className="link-box-text">
+            Some other <br></br> examples
+          </div>
           <Link href="/nfts/gallery">
             <div className="button-text">Gallery</div>
           </Link>

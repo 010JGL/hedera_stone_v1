@@ -12,20 +12,52 @@ export async function POST(request) {
   const sqlClient = await db.connect();
   const res = await request.json();
 
-  const words = res.words;
-  const firstname = res.firstname;
-  const middlename = res.middlename;
-  const surname = res.surname;
-  const datebirth = res.datebirth;
-  const datedied = res.datedied;
-  const country = res.country;
-  const state = res.state;
-  const city = res.city;
-  const cemeteryname = res.cemeteryname;
-  const extras = res.extras;
-  const iconUrl = res.iconUrl;
-  const tokenId = res.tokenId;
-  const metadata = res.metadata;
+  const hederaClient = Client.forTestnet().setOperator(
+    process.env.HS_TREASURY,
+    process.env.HS_PRIVATE_KEY
+  );
+  const tokenCreateTx = new TokenCreateTransaction()
+    .setTokenName(`${firstname} ${surname}`)
+    .setTokenType(TokenType.NonFungibleUnique)
+    .setTokenSymbol(process.env.HS_SYMBOL)
+    .setTreasuryAccountId(AccountId.fromString(process.env.HS_TREASURY))
+    .setSupplyKey(PublicKey.fromString(process.env.HS_PUBLIC_KEY))
+    .freezeWith(hederaClient);
+
+  const tokenCreateSubmit = await tokenCreateTx.execute(hederaClient);
+  const tokenCreateReceipt = await tokenCreateSubmit.getReceipt(hederaClient);
+  const tokenId = tokenCreateReceipt.tokenId.toString();
+  console.log("Token ID: ", tokenId);
+
+  const {
+    words,
+    firstname,
+    middlename,
+    surname,
+    datebirth,
+    datedied,
+    country,
+    state,
+    city,
+    cemeteryname,
+    extras,
+    iconUrl,
+    metadata,
+  } = res;
+
+  // const words = res.words;
+  // const firstname = res.firstname;
+  // const middlename = res.middlename;
+  // const surname = res.surname;
+  // const datebirth = res.datebirth;
+  // const datedied = res.datedied;
+  // const country = res.country;
+  // const state = res.state;
+  // const city = res.city;
+  // const cemeteryname = res.cemeteryname;
+  // const extras = res.extras;
+  // const iconUrl = res.iconUrl;
+  // const metadata = res.metadata;
   // Validations here for same Username
 
   let success = true;
@@ -38,25 +70,9 @@ export async function POST(request) {
     );
   console.log(`newUpload`, newUpload);
 
-  // if (success) {
-  //   // create a new NFT
-  //   const hederaClient = Client.forTestnet().setOperator(
-  //     process.env.HS_TREASURY,
-  //     process.env.HS_PRIVATE_KEY
-  //   );
-  //   const tokenCreateTx = new TokenCreateTransaction()
-  //     .setTokenName(`${firstname} ${surname}`)
-  //     .setTokenType(TokenType.NonFungibleUnique)
-  //     .setTokenSymbol(process.env.HS_SYMBOL)
-  //     .setTreasuryAccountId(AccountId.fromString(process.env.HS_TREASURY))
-  //     .setSupplyKey(PublicKey.fromString(process.env.HS_PUBLIC_KEY))
-  //     .freezeWith(hederaClient);
-
-  //   const tokenCreateSubmit = await tokenCreateTx.execute(hederaClient);
-  //   const tokenCreateReceipt = await tokenCreateSubmit.getReceipt(hederaClient);
-  //   const tokenId = tokenCreateReceipt.tokenId.toString();
-  //   console.log("Token ID: ", tokenId);
-  // }
+  if (success) {
+    // create a new NFT
+  }
 
   const sendData = { ...res, success };
 

@@ -6,12 +6,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@nextui-org/react";
+import { WalletSignerType, WalletContext } from "../../context/walletContext";
 
 import logo from "../../../public/images/HederaStoneLogo.jpg";
 import title from "../../../public/images/HederaStoneTitle.png";
 import bladewallet from "../../../public/images/bladewallet.png";
+import PairBlade from "../buttons/pairWallet/PairBlade";
 
-import { BladeSigner, HederaNetwork } from "@bladelabs/blade-web3.js";
+// import { BladeSigner, HederaNetwork } from "@bladelabs/blade-web3.js";
 
 const NavbarNfts = (path) => {
   const [currentPath, setCurrentPath] = useState("");
@@ -22,21 +24,8 @@ const NavbarNfts = (path) => {
   const id = path.props.slice(14);
   const specificLink = `/nfts/gallery/${id}`;
 
-  async function initBlade() {
-    const bladeSigner = new BladeSigner();
-    const params = {
-      network: HederaNetwork.Testnet,
-      // dAppCode - optional while testing, request specific one by contacting us.
-      dAppCode: "yourAwesomeApp",
-    };
-    // create session with optional parameters.
-    await bladeSigner.createSession(params);
-
-    // bladeSigner object can now be used.
-    bladeSigner.getAccountId();
-    console.log(`bladeSigner.getAccountId().toString()`, bladeSigner.getAccountId().toString())
-    bladeSigner.getAccountId().toString()
-  }
+  // @type {WalletSignerType}
+  const { connectBlade, connectedId } = React.useContext(WalletContext);
 
   return (
     <ul className="nav-container">
@@ -142,7 +131,13 @@ const NavbarNfts = (path) => {
       <div className="button-icon">
         <Image src={bladewallet} width={160} height={100} alt="Login button" />
         <div className="button-wallet">
-          <Button
+          <PairBlade />
+          {connectedId ? (
+            <p>Connected: {connectedId}</p>
+          ) : (
+            <p>Connect Wallet</p>
+          )}
+          {/* <Button
             color="gradient"
             auto
             onClick={(e) => {
@@ -150,7 +145,7 @@ const NavbarNfts = (path) => {
             }}
           >
             Connect Blade Wallet
-          </Button>
+          </Button> */}
         </div>
       </div>
     </ul>
