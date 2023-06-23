@@ -7,7 +7,7 @@ import ThreeD_image from "../components/3d_image/threed_image";
 import VideoPlayer from "../components/video/video";
 import Image from "next/image";
 
-import hp3 from "@/public/images/HP3.JPG";
+import hp3 from "../../public/images/HP3.JPG";
 
 export default function Nfts() {
   const hp1 = {
