@@ -11,10 +11,17 @@ import logo from "../../../public/images/HederaStoneLogo.jpg";
 import title from "../../../public/images/HederaStoneTitle.png";
 import bladewallet from "../../../public/images/bladewallet.png";
 
-import { BladeSigner, HederaNetwork } from "@bladelabs/blade-web3.js";
+import { BladeConnector, ConnectorStrategy } from "@bladelabs/blade-web3.js";
+import { HederaNetwork } from "@bladelabs/blade-web3.js";
+
+import { BladeSigner } from "@bladelabs/blade-web3.js";
+import { bladeConnector } from "@bladelabs/blade-web3.js";
 
 const NavbarNfts = (path) => {
   const [currentPath, setCurrentPath] = useState("");
+
+  const [status, setStatus] = useState("0");
+
   useEffect(() => {
     setCurrentPath(path);
   });
@@ -22,21 +29,30 @@ const NavbarNfts = (path) => {
   const id = path.props.slice(14);
   const specificLink = `/nfts/gallery/${id}`;
 
-  async function initBlade() {
-    const bladeSigner = new BladeSigner();
-    const params = {
-      network: HederaNetwork.Testnet,
-      // dAppCode - optional while testing, request specific one by contacting us.
-      dAppCode: "yourAwesomeApp",
-    };
-    // create session with optional parameters.
-    await bladeSigner.createSession(params);
 
-    // bladeSigner object can now be used.
-    bladeSigner.getAccountId();
-    console.log(`bladeSigner.getAccountId().toString()`, bladeSigner.getAccountId().toString())
-    bladeSigner.getAccountId().toString()
-  }
+  // async function initBlade() {
+  //   const bladeSigner = new BladeSigner();
+  //   const params = {
+  //     network: HederaNetwork.Testnet,
+  //     // dAppCode - optional while testing, request specific one by contacting us.
+  //     dAppCode: "yourAwesomeApp",
+  //   };
+  //   // create session with optional parameters.
+  //   await bladeSigner.createSession(params);
+
+  //   // bladeSigner object can now be used.
+
+  //   bladeSigner.getAccountId();
+  //   bladeSigner.getAccountId().toString();
+  //   console.log(
+  //     `bladeSigner.getAccountId().toString()`,
+  //     bladeSigner.getAccountId().toString()
+  //   );
+  // }
+  // async function checkAccount() {
+  //   console.log()
+  // }
+  // checkAccount();
 
   return (
     <ul className="nav-container">
@@ -141,6 +157,7 @@ const NavbarNfts = (path) => {
       </div>
       <div className="button-icon">
         <Image src={bladewallet} width={160} height={100} alt="Login button" />
+
         <div className="button-wallet">
           <Button
             color="gradient"
