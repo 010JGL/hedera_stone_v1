@@ -39,13 +39,11 @@ export default function Nfts() {
       <div className="middle-box">
         <div className="middle-image">
           <Image
-                src={hp3}
-                width={832}
-                height={468}
-                alt="Picture of the author"
-                 >
-
-          </Image>
+            src={hp3}
+            width={832}
+            height={468}
+            alt="Picture of a HeadtStone"
+          ></Image>
         </div>
         <div className="middle-text">
           We dont just have one image of each<br></br> memorial, we jave at
