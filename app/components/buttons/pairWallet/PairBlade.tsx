@@ -21,7 +21,7 @@ const PairBlade = () => {
         src="/images/bladewallet.png"
         alt="Blade GoMusic Icon"
       />
-      <span>Blade</span>
+      <span>Blade</span>sa
     </button>
   );
 };

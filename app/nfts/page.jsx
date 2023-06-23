@@ -2,15 +2,11 @@
 
 import { StrictMode } from "react";
 
-<<<<<<< HEAD
-// import ThreeD_image from "../components/3d_image/threed_image";
-=======
 import { Card, Text } from "@nextui-org/react";
 
 import Link from "next/link";
 
 import ThreeD_image from "../components/3d_image/threed_image";
->>>>>>> main
 
 import VideoPlayer from "../components/video/video";
 
@@ -87,13 +83,17 @@ export default function Nfts() {
       </div>
       <div className="links-box">
         <div className="link-box">
-          <div className="link-box-text">How to search for <br></br> an ancestor</div>
+          <div className="link-box-text">
+            How to search for <br></br> an ancestor
+          </div>
           <Link href="/nfts/search">
             <div className="button-text">Search</div>
           </Link>
         </div>
         <div className="link-box">
-          <div className="link-box-text">Some other <br></br> examples</div>
+          <div className="link-box-text">
+            Some other <br></br> examples
+          </div>
           <Link href="/nfts/gallery">
             <div className="button-text">Gallery</div>
           </Link>
