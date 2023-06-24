@@ -62,6 +62,15 @@ const PayBlade = ({ tokenId }) => {
 
   const executeAtomicSwap = async () => {
     setLoading(true);
+    const treasuryNfts = await fetch(
+      process.env.NEXT_PUBLIC_MIRRORNODE +
+        `accounts/${"0.0.1362308"}/nfts?token.id=${tokenId}`
+    );
+
+    const { nfts } = await treasuryNfts.json();
+
+    const index = Math.floor(Math.random() * nfts.length);
+    const serial = nfts[index].serial_number;
     let res;
     try {
       res = await fetch("/api/buy", {
@@ -70,6 +79,7 @@ const PayBlade = ({ tokenId }) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          serial,
           tokenId,
           buyer: connectedId,
         }),
