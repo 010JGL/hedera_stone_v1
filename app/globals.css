@@ -1,3 +1,4 @@
+
 ul {
   background-color: black;
   color: white;
@@ -5,6 +6,7 @@ ul {
 main {
   color:white;
   background-color: black;
+  font-family: 'Raleway', sans-serif;
 }
 a:link {
   text-decoration: none;
@@ -144,6 +146,7 @@ a:active {
   width:33%;
 }
 .footer-box {
+  padding-top: 900px;
   background-color: black;
   background-image: url("../public/images/Website_footer2.png");
   height: 600px;
@@ -243,6 +246,7 @@ a:active {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  
   height: 600px;
 }
 .bot-picture {
@@ -251,6 +255,11 @@ a:active {
   background-size: contain;
   background-position: center;
   height: 600px;
+}
+.middle-column-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .middle-column {
   display: flex;
@@ -271,8 +280,8 @@ a:active {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 468px;
-  width: 832px;
+  height: 360px;
+  width: 640px;
 }
 .bottom-text {
   padding-left: 10rem;
@@ -308,4 +317,7 @@ a:active {
 .title-text {
   padding-top: 3rem;
   padding-bottom: 2rem;
+}
+.homepage-form {
+  width: 30%;
 }

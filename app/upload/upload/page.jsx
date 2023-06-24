@@ -24,13 +24,9 @@ export default function UploadForm() {
     "https://bafybeifwnxnd46atsixewshki75gzrt5ukkpss2533rtijtmiuiwzodhyy.ipfs.nftstorage.link/"
   );
   //const [imageFile, SetImageFile] = useState("");
-  const [tokenId, settokenId] = useState("");
   const [metadata, setMetaData] = useState("");
 
 
-  const handleImage = async (e) => {
-    
-  }
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -58,7 +54,6 @@ export default function UploadForm() {
         cemeteryname,
         extras,
         iconUrl,
-        tokenId,
         metadata
       }),
     });
@@ -68,8 +63,9 @@ export default function UploadForm() {
   };
 
   return (
+    
     <main className="main">
-      <h1 className="title">Welcome to the upload page</h1>
+      <h1 className="title">Welcome to the CTE Upload Page</h1>
       <div className="form-container">
         <Form>
           <Form.Group className="mb-3" controlId="formBasicW3w">
@@ -194,16 +190,6 @@ export default function UploadForm() {
               type="iconUrl"
               name="iconUrl"
               placeholder="CID URL"
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicTokenId">
-            <Form.Label>Token ID</Form.Label>
-            <Form.Control
-              value={tokenId}
-              onChange={(e) => settokenId(e.target.value)}
-              type="tokenId"
-              name="tokenId"
-              placeholder="Token Id"
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicMetaData">

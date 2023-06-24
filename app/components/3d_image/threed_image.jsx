@@ -18,7 +18,7 @@ export default function ThreeD_image() {
         dpr={[1, 2]}
         shadows
         camera={{ fov: 45 }}
-        style={{ position: "absolute", height: "600px", width: "1800px" }}
+        style={{ position: "absolute", height: "600px", width: "1300px" }}
       >
         <color attach="background" args={["#101010"]} />
         <PresentationControls
@@ -26,7 +26,7 @@ export default function ThreeD_image() {
           global
           zoom={6}
           polar={[0, Math.PI / 2]}
-          rotation={[0, 4.6, 0]}
+          rotation={[0, 0, 0]}
         >
           <Stage environment={null}>
             <Model scale={0.01} />
