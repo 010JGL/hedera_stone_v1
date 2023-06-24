@@ -32,9 +32,23 @@ export default function Nfts() {
         <ThreeD_image></ThreeD_image>
       </div>
       <div className="video-box">
-        <StrictMode>
-          <VideoPlayer url={hp1} />
-        </StrictMode>
+        <div>
+          <iframe
+            src="https://player.vimeo.com/video/839226620?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            style={{
+              position: "absolute",
+              top: "850px",
+              left: "25%",
+              width: "50%",
+              height: "50%",
+            }}
+            title="HP2_Imagine"
+          ></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
       </div>
       <div className="middle-box">
         <div className="middle-image"></div>
@@ -72,13 +86,15 @@ export default function Nfts() {
           css={{ mw: "2000px", backgroundColor: "black" }}
         >
           <Card.Body>
-          <Text size={24} className="text-box" css={{ color: "white"}}>HOW IT WORKS</Text>
-            <Text size={24} className="text-box" css={{ color: "white"}}>
-              <br></br> We have a huge community around the globe
-              whose passion is capturing images which we then turn into 3D
-              models. If you would like to join that community and earn
-              royalties from the models we create, then please leave your name
-              and email address and we will send more information.
+            <Text size={24} className="text-box" css={{ color: "white" }}>
+              HOW IT WORKS
+            </Text>
+            <Text size={24} className="text-box" css={{ color: "white" }}>
+              <br></br> We have a huge community around the globe whose passion
+              is capturing images which we then turn into 3D models. If you
+              would like to join that community and earn royalties from the
+              models we create, then please leave your name and email address
+              and we will send more information.
             </Text>
             <Form>
               <Form.Group className="homepage-form" controlId="formBasicName">
