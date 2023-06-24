@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -21,7 +22,7 @@ export default function Login() {
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
   const [confirmation, setConfirmation] = useState("");
-  const [results, setResults] = useState("");
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -7,12 +7,14 @@ export async function POST(request) {
 
   const firstname = res.firstname;
   const lastname = res.lastname;
+  const datebirth = res.datebirth;
+  const datedied = res.datedied;
 
   // Validations here for same Username
 
   // Creates a new user into DB
   const searchList =
-    await client.sql`SELECT * FROM nfts WHERE firstname IN (${firstname}) AND surname IN (${lastname});`;
+    await client.sql`SELECT * FROM nfts WHERE firstname IN (${firstname}) AND surname IN (${lastname}) AND datebirth IN (${datebirth}) AND datedied IN (${datedied});`;
   //console.log(`searchList.rows:`, searchList.rows)
   const sendData = { ...res, success: true };
 

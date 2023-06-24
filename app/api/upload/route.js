@@ -73,9 +73,9 @@ export async function POST(request) {
         success = false;
       }
     );
-  console.log(`newUpload`, newUpload);
-
-  const sendData = { ...res, success, tokenId };
+    
+    const sendData = { ...res, success, tokenId };
+    //console.log(`sendData`, sendData);
 
   return NextResponse.json(sendData);
 }

@@ -53,7 +53,7 @@ export default function Specific() {
     });
     // Returns * from the table
     const results = await res.json();
-    console.log(`results:`, results.tokenId)
+    console.log(`results:`, results.tokenId);
     setFirstname(results.firstname);
     setMiddlename(results.middlename);
     setSurname(results.surname);

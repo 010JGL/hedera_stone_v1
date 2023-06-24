@@ -45,13 +45,5 @@ const handleSubmit = async (e) => {
   // returns an empty object if password doesnt match
   const data2 = await res.json();
   //console.log(`data2:`, data2);
-  // checks if object empty
-  // if (Object.keys(data2).length < 1) {
-  //   alert(`Wrong password`);
-  // } else {
-  //   // login logic here
-  //   alert(`Login success`)
-  //   return data2
-  // }
   
 };

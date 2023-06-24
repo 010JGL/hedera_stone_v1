@@ -9,6 +9,8 @@ import { Form, Button } from "react-bootstrap";
 export default function Search() {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
+  const [datebirth, setDatebirth] = useState("");
+  const [datedied, setDatedied] = useState("");
 
   const [data3, setData3] = useState("");
 
@@ -27,11 +29,13 @@ export default function Search() {
         time: new Date().toISOString(),
         firstname,
         lastname,
+        datebirth,
+        datedied
       }),
     });
 
     const data3 = await res.json();
-    //console.log(`data3:`, data3);
+    console.log(`data3:`, data3);
     setData3(data3);
   };
 
@@ -59,6 +63,26 @@ export default function Search() {
                 type="lastname"
                 name="lastname"
                 placeholder="Last Name (Capital first letter)"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicW3w">
+              <Form.Label>Date of birth</Form.Label>
+              <Form.Control
+                value={datebirth}
+                onChange={(error) => setDatebirth(error.target.value)}
+                type="datebirth"
+                name="datebirth"
+                placeholder="Date of birth Day-Month-Year 01-02-2010"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicW3w">
+              <Form.Label>Date of death</Form.Label>
+              <Form.Control
+                value={datedied}
+                onChange={(error) => setDatedied(error.target.value)}
+                type="lastname"
+                name="lastname"
+                placeholder="Date of death Day-Month-Year 01-02-2010"
               />
             </Form.Group>
             <Button variant="primary" type="submit" onClick={handleSearch}>
@@ -92,6 +116,26 @@ export default function Search() {
                 type="lastname"
                 name="lastname"
                 placeholder="Last Name (Capital first letter)"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicW3w">
+              <Form.Label>Date of birth</Form.Label>
+              <Form.Control
+                value={datebirth}
+                onChange={(error) => setDatebirth(error.target.value)}
+                type="datebirth"
+                name="datebirth"
+                placeholder="Date of birth Day-Month-Year 01-02-2010"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicW3w">
+              <Form.Label>Date of death</Form.Label>
+              <Form.Control
+                value={datedied}
+                onChange={(error) => setDatedied(error.target.value)}
+                type="lastname"
+                name="lastname"
+                placeholder="Date of death Day-Month-Year 01-02-2010"
               />
             </Form.Group>
             <Button variant="primary" type="submit" onClick={handleSearch}>
