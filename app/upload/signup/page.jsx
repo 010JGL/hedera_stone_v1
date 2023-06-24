@@ -21,10 +21,10 @@ export default function SignUp() {
       theme: "colored",
     });
 
-  const [username, setUsername] = useState("jaycool9");
-  const [name, setName] = useState("Jay Cool");
-  const [email, setEmail] = useState("Jay9@cool.com");
-  const [password, setPassword] = useState("123456");
+  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [role, setRole] = useState("basic");
   const [message, setMessage] = useState("");
 
