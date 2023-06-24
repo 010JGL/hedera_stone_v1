@@ -4,6 +4,8 @@ import { StrictMode } from "react";
 
 import { Card, Text } from "@nextui-org/react";
 
+import { Form, Button } from "react-bootstrap";
+
 import Link from "next/link";
 
 // import ThreeD_image from "../components/3d_image/threed_image";
@@ -13,21 +15,18 @@ import VideoPlayer from "../components/video/video";
 export default function Nfts() {
   const hp1 = {
     url: "https://streamable.com/cfz9j0",
-    height: "756px",
-    width: "1344px",
+    height: "360px",
+    width: "640px",
   };
 
   const hp4 = {
     url: "https://streamable.com/wp2j24",
-    height: "468px",
-    width: "832px",
+    height: "360px",
+    width: "640px",
   };
 
   return (
     <main className="main">
-      <h1 className="title">
-        Welcome to HederaStone … Your family tree in three dimensions
-      </h1>
 
       {/* <div className="three-d-container">
       </div>
@@ -42,7 +41,7 @@ export default function Nfts() {
       <div className="middle-box">
         <div className="middle-image"></div>
         <div className="middle-text">
-          We dont just have one image of each<br></br> memorial, we jave at
+          We don't just have one image of each<br></br> memorial, we have at
           least 20.
         </div>
       </div>
@@ -56,11 +55,15 @@ export default function Nfts() {
           </StrictMode>
         </div>
       </div>
-      <div className="middle-column">
-        <p className="title-text">This is how it looks from your phone.</p>
-        <div className="top-picture"></div>
-        <p className="title-text">You can even project it at home.</p>
-        <div className="bot-picture"></div>
+      <div className="middle-column-box">
+        <div className="middle-column">
+          <p className="title-text">This is how it looks from your phone.</p>
+          <div className="top-picture"></div>
+        </div>
+        <div className="middle-column">
+          <p className="title-text">You can even project it at home.</p>
+          <div className="bot-picture"></div>
+        </div>
       </div>
       <div className="bottom-text-box">
         <Card
@@ -74,9 +77,23 @@ export default function Nfts() {
               whose passion is capturing images which we then turn into 3D
               models. If you would like to join that community and earn
               royalties from the models we create, then please leave your name
-              (Input Box) and email address here (Input Box) and we will send
-              more information.
+              and email address and we will send more information.
             </Text>
+            <Form>
+              <Form.Group className="homepage-form" controlId="formBasicName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="name" placeholder="Enter name" />
+              </Form.Group>
+
+              <Form.Group className="homepage-form" controlId="formBasicEmail">
+                <Form.Label>Email Address</Form.Label>
+                <Form.Control type="email" placeholder="Enter Email" />
+              </Form.Group>
+
+              <Button variant="primary" type="submit">
+                Submit
+              </Button>
+            </Form>
           </Card.Body>
         </Card>
       </div>

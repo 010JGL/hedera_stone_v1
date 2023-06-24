@@ -58,7 +58,7 @@ export default function SignUp() {
   if (message.length < 1) {
     return (
       <main className="main">
-        <h1 className="title">Sign up here</h1>
+        <h1 className="title">CTE Sign Up Here</h1>
         <div className="form-container">
           <Form>
             <Form.Group className="mb-3" controlId="formBasicUsername">

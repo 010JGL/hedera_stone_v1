@@ -99,7 +99,7 @@ export default function Gallery() {
                 </Card>
               </Link>
               <Text size={16} weight="bold" transform="uppercase" color="white">
-                Example 3D images to come
+                Click on 2D image for 3D model
               </Text>
                 {/* <Small_3d></Small_3d> */}
             </Grid>
