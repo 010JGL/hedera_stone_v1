@@ -6,7 +6,7 @@ import { Card, Text } from "@nextui-org/react";
 
 import Link from "next/link";
 
-import ThreeD_image from "../components/3d_image/threed_image";
+// import ThreeD_image from "../components/3d_image/threed_image";
 
 import VideoPlayer from "../components/video/video";
 
@@ -28,10 +28,12 @@ export default function Nfts() {
       <h1 className="title">
         Welcome to HederaStone … Your family tree in three dimensions
       </h1>
-      <div className="three-d-container">
-        {/* <ThreeD_image></ThreeD_image> */}
+
+      {/* <div className="three-d-container">
       </div>
       <div className="home-display"></div>
+        <ThreeD_image></ThreeD_image>
+
       <div className="video-box">
         <StrictMode>
           <VideoPlayer url={hp1} />
@@ -106,7 +108,7 @@ export default function Nfts() {
             <div className="button-text">Collection</div>
           </Link>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

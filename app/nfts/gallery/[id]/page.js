@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 
 import { Card, Row, Button, Text, Table } from "@nextui-org/react";
 
+import PayBlade from "../../../components/buttons/pay/PayBlade";
+
 export default function Specific() {
   const [words, setWords] = useState("");
   const [firstname, setFirstname] = useState("");
@@ -88,14 +90,18 @@ export default function Specific() {
             <Row wrap="wrap" justify="space-evenly" align="center">
               <Text b>5000 HBAR</Text>
               <Button flat auto rounded color="primary">
-                <Text
+                {/* THIS IS WHERE YOU PASS IN THE TOKEN ID DYNAMICALLY */}
+                {/* BASED ON THE DATA COMING FROM DB */}
+                <PayBlade tokenId={"0.0.14972996"} />
+
+                {/* <Text
                   css={{ color: "inherit" }}
                   size={12}
                   weight="bold"
                   transform="uppercase"
                 >
                   Buy
-                </Text>
+                </Text> */}
               </Button>
             </Row>
           </Card.Footer>
