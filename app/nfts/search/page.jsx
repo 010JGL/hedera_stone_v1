@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import SearchResult from "../../components/searchResult/searchResult";
 
@@ -8,6 +8,8 @@ import { Form, Button } from "react-bootstrap";
 
 export default function Search() {
   const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+
   const [data3, setData3] = useState("");
 
   const handleSearch = async (e) => {
@@ -24,6 +26,7 @@ export default function Search() {
       body: JSON.stringify({
         time: new Date().toISOString(),
         firstname,
+        lastname,
       }),
     });
 
@@ -48,6 +51,16 @@ export default function Search() {
                 placeholder="First Name (Capital first letter)"
               />
             </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicW3w">
+              <Form.Label>Surname</Form.Label>
+              <Form.Control
+                value={lastname}
+                onChange={(error) => setLastname(error.target.value)}
+                type="lastname"
+                name="lastname"
+                placeholder="Last Name (Capital first letter)"
+              />
+            </Form.Group>
             <Button variant="primary" type="submit" onClick={handleSearch}>
               Submit
             </Button>
@@ -69,6 +82,16 @@ export default function Search() {
                 type="firstname"
                 name="firstname"
                 placeholder="First Name (Capital first letter)"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicW3w">
+              <Form.Label>Surname</Form.Label>
+              <Form.Control
+                value={lastname}
+                onChange={(error) => setLastname(error.target.value)}
+                type="lastname"
+                name="lastname"
+                placeholder="Last Name (Capital first letter)"
               />
             </Form.Group>
             <Button variant="primary" type="submit" onClick={handleSearch}>

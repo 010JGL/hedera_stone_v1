@@ -6,7 +6,6 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 export default function UploadForm() {
-
   const [words, setWords] = useState("");
   const [firstname, setFirstname] = useState("");
   const [middlename, setMiddlename] = useState("");
@@ -17,15 +16,10 @@ export default function UploadForm() {
   const [state, setState] = useState("");
   const [city, setCity] = useState("");
   const [cemeteryname, setCemeteryname] = useState("");
-  const [extras, setExtras] = useState(
-    ""
-  );
-  const [iconUrl, setIconUrl] = useState(
-    ""
-  );
+  const [extras, setExtras] = useState("");
+  const [iconUrl, setIconUrl] = useState("");
   //const [imageFile, SetImageFile] = useState("");
   const [metadata, setMetaData] = useState("");
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,7 +27,7 @@ export default function UploadForm() {
     // validations
     // Gotta add user.id from cookies? to keep track of who uploaded
 
-    console.log(`inside handleSubmit upload`);
+    //console.log(`inside handleSubmit upload`);
 
     const res = await fetch("/api/upload", {
       method: "POST",
@@ -54,16 +48,15 @@ export default function UploadForm() {
         cemeteryname,
         extras,
         iconUrl,
-        metadata
+        metadata,
       }),
     });
 
     const data3 = await res.json();
-    console.log(data3);
+    //console.log(data3);
   };
 
   return (
-    
     <main className="main">
       <h1 className="title">Welcome to the CTE Upload Page</h1>
       <div className="form-container">

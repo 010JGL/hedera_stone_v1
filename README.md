@@ -128,15 +128,6 @@ Run `npm install --save react-native-video`
 
 
 
--3d image loading time           PRELOAD IT
--Login feature, use bcrypt? yes
-
-
--nft.storage type of files 
-
-
--highlighted bold icons on navbar
-
 ### To do list
 - Make the readme complete with instructions and description of the work.
 
@@ -148,6 +139,10 @@ Run `npm install --save react-native-video`
 
 - Testing the API 
 
+- Refactor the navbar buttons link
+
+- Make the homepage form collect the information on DB
+
 ### Future to do list
 
 - Login feature
@@ -157,8 +152,12 @@ Run `npm install --save react-native-video`
 
 
 
------
--Should we make the Image from nav bar priority={true} ?
+----- notes ----
+
+-3d image loading time           PRELOAD IT
+-Login feature, use bcrypt? yes
+
+
 
 
 

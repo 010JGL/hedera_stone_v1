@@ -49,7 +49,7 @@ export default function SignUp() {
     });
 
     const results = await res.json();
-    console.log(`results`, results);
+    //console.log(`results`, results);
 
     setMessage(results);
     notify();

@@ -15,7 +15,7 @@ const NavbarUp = (path) => {
     setCurrentPath(path);
   });
 
-  console.log(`currentPath.props:`, currentPath.props);
+  //console.log(`currentPath.props:`, currentPath.props);
 
   return (
     <ul className="nav-container">

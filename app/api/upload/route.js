@@ -68,7 +68,7 @@ export async function POST(request) {
         success = false;
       }
     );
-  console.log(`newUpload`, newUpload);
+  //console.log(`newUpload`, newUpload);
 
   if (success) {
     // create a new NFT

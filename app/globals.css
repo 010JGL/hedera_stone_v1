@@ -272,13 +272,6 @@ a:active {
   text-align: center;
   font-size: 2.5rem;
 }
-.bot-image {
-  background-image: url("../public/images/HP5.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  height: 600px;
-}
 .middle-image {
   background-image: url("../public/images/HP3.JPG");
   background-repeat: no-repeat;

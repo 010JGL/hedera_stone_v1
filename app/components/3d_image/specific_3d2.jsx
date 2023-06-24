@@ -6,8 +6,6 @@ import { PresentationControls, useGLTF, Stage } from "@react-three/drei";
 
 import {} from "three/examples/jsm/controls/OrbitControls";
 
-
-
 function Model(props) {
   const { scene } = useGLTF("/Grave_13_website.glb");
   return <primitive object={scene} {...props} />;

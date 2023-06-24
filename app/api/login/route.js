@@ -1,4 +1,3 @@
-
 import { NextResponse } from "next/server";
 import { db } from "@vercel/postgres";
 
@@ -11,19 +10,16 @@ export async function POST(request) {
   // Validations here for same pasword
   const wrong = {};
 
-  const getUserPassword = await client.sql`SELECT password FROM users WHERE email = ${email};`;
+  const getUserPassword =
+    await client.sql`SELECT password FROM users WHERE email = ${email};`;
   //console.log(`getUserPassword:`, getUserPassword.rows[0].password)
 
   if (getUserPassword.rows[0].password == password) {
-
     const sendData = { ...res, success: true };
-  
+
     return NextResponse.json(sendData);
   } else {
-
-    console.log(`Wrong password`)
+    console.log(`Wrong password`);
     return NextResponse.json(wrong);
   }
-  
-
 }

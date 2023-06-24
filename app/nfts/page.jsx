@@ -1,6 +1,6 @@
 "use client";
 
-import { StrictMode } from "react";
+import { StrictMode, useEffect } from "react";
 
 import { Card, Text } from "@nextui-org/react";
 
@@ -35,9 +35,8 @@ export default function Nfts() {
         <div>
           <iframe
             src="https://player.vimeo.com/video/839226620?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-            frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
             style={{
               position: "absolute",
               top: "850px",

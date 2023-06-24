@@ -5,12 +5,10 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@nextui-org/react";
 import { WalletSignerType, WalletContext } from "../../context/walletContext";
 
 import logo from "../../../public/images/HederaStoneLogo.jpg";
 import title from "../../../public/images/HederaStoneTitle.png";
-import bladewallet from "../../../public/images/bladewallet.png";
 import PairBlade from "../buttons/pairWallet/PairBlade";
 
 // import { BladeSigner, HederaNetwork } from "@bladelabs/blade-web3.js";
@@ -129,7 +127,6 @@ const NavbarNfts = (path) => {
         </div>
       </div>
       <div className="button-icon">
-        {/* <Image src={bladewallet} width={160} height={100} alt="Login button" /> */}
         <div className="button-wallet">
           <PairBlade />
           {connectedId ? (
@@ -137,15 +134,6 @@ const NavbarNfts = (path) => {
           ) : (
             <p>Connect Wallet</p>
           )}
-          {/* <Button
-            color="gradient"
-            auto
-            onClick={(e) => {
-              initBlade();
-            }}
-          >
-            Connect Blade Wallet
-          </Button> */}
         </div>
       </div>
     </ul>
