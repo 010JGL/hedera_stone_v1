@@ -134,7 +134,8 @@ a:active {
 .cards-container {
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-top: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
 }
 .title {
   display: flex;
@@ -151,9 +152,12 @@ a:active {
   padding-top: 700px;
   background-color: black;
   background-image: url("../public/images/Website_footer2.png");
-  height: 50%;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 70%;
+}
+.twoD-text {
+  padding-left: 12px;
 }
 .footer-icons {
   display: flex;
@@ -196,7 +200,6 @@ a:active {
 .nextui-c-hWZRae-bzEnZV-borderWeight-normal {
   width: 1600px;
 }
-
 .homepage {
   height: 1200px;
   background-color: black;
@@ -321,4 +324,8 @@ a:active {
   padding-top: 1rem;
   width: 30%;
   color: white;
+}
+.threeD-text {
+  padding-left:45px;
+
 }

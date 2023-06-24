@@ -68,7 +68,13 @@ export default function Gallery() {
     <main className="main">
       <h1 className="title">Gallery</h1>
       <div className="cards-container">
-        <Text size={16} weight="bold" transform="uppercase" color="white">
+        <Text
+          size={16}
+          weight="bold"
+          transform="uppercase"
+          color="white"
+          className="twoD-text"
+        >
           Example 2D images
         </Text>
         <Grid.Container gap={2} justify="flex-start">
@@ -105,14 +111,14 @@ export default function Gallery() {
           ))}
         </Grid.Container>
       </div>
+      <Text size={16} weight="bold" transform="uppercase" color="white" className="threeD-text">
+        Click on the images below to see 3D Model
+      </Text>
       {/* Data to be incorporated in DB and displayed dynamicly in the future */}
       <div className="cards-container">
         <Grid.Container gap={2} justify="flex-start">
           {urlList.map((item, index) => (
             <Grid xs={6} sm={3} key={index}>
-              <Text size={16} weight="bold" transform="uppercase" color="white">
-                Click on 2D image for 3D model
-              </Text>
               <Link href={`/nfts/gallery/${index + 1}`}>
                 <Card isPressable>
                   <Card.Body css={{ p: 0 }}>
