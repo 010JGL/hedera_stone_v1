@@ -53,7 +53,7 @@ export default function UploadForm() {
     });
 
     const data3 = await res.json();
-    //console.log(data3);
+    console.log(data3);
   };
 
   return (
@@ -68,7 +68,7 @@ export default function UploadForm() {
               onChange={(e) => setWords(e.target.value)}
               type="words"
               name="words"
-              placeholder="Headstone(What3Words)"
+              placeholder="Headstone (What3Words)"
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCountry">
