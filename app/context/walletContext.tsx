@@ -51,10 +51,10 @@ const WalletProvider = ({ children }: { children: ReactNode }) => {
     };
 
     const bladeConnector = new BladeConnector(ConnectorStrategy.EXTENSION, {
-      name: "GoMusic",
-      description: "Get closer to your favorite artists",
-      icons: ["https://beta.gomusic.co/gm.svg"],
-      url: "https://beta.gomusic.co",
+      name: "Hedera Stone",
+      description: "Get some 2d and 3d",
+      icons: ["https://hedera-stone-v1-tau.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FHederaStoneLogo.d710e92c.jpg&w=128&q=75"],
+      url: "https://hedera-stone-v1-tau.vercel.app/",
     });
     let accountIds: string[] = [];
     try {

@@ -53,7 +53,7 @@ export default function Specific() {
     });
     // Returns * from the table
     const results = await res.json();
-
+    console.log(`results:`, results.tokenId)
     setFirstname(results.firstname);
     setMiddlename(results.middlename);
     setSurname(results.surname);
@@ -66,7 +66,7 @@ export default function Specific() {
     setExtras(results.extras);
     setWords(results.words);
     setIconUrl(results.iconurl);
-    setTokenId(results.tokenId)
+    setTokenId(results.tokenid);
   };
 
   useEffect(() => {
