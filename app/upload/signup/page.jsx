@@ -26,7 +26,7 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("basic");
-  const [message, setMessage] = useState("");
+  const [confirmation, setConfirmation] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,13 +49,13 @@ export default function SignUp() {
     });
 
     const results = await res.json();
-    //console.log(`results`, results);
+    console.log(`results`, results);
 
-    setMessage(results);
+    setConfirmation(results);
     notify();
   };
 
-  if (message.length < 1) {
+  if (confirmation.length < 1) {
     return (
       <main className="main">
         <h1 className="title">CTE Sign Up Here</h1>

@@ -1,6 +1,12 @@
 import { sql } from "@vercel/postgres";
 
-
+`CREATE TABLE users (
+    username VARCHAR(255) NOT NULL,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    role VARCHAR(255)
+    );`
 
 // nfts
 `DROP TABLE IF EXISTS nfts CASCADE;`;
