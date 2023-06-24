@@ -8,7 +8,7 @@ import { Form, Button } from "react-bootstrap";
 
 import Link from "next/link";
 
-// import ThreeD_image from "../components/3d_image/threed_image";
+import ThreeD_image from "../components/3d_image/threed_image";
 
 import VideoPlayer from "../components/video/video";
 
@@ -27,12 +27,10 @@ export default function Nfts() {
 
   return (
     <main className="main">
-
-      {/* <div className="three-d-container">
-      </div>
+      <div className="three-d-container">
       <div className="home-display"></div>
-        <ThreeD_image></ThreeD_image>
-
+      <ThreeD_image></ThreeD_image>
+      </div>
       <div className="video-box">
         <StrictMode>
           <VideoPlayer url={hp1} />
@@ -125,7 +123,7 @@ export default function Nfts() {
             <div className="button-text">Collection</div>
           </Link>
         </div>
-      </div> */}
+      </div>
     </main>
   );
 }
