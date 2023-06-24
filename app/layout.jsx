@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <style precedence="default" href="1">
+      <style>
         @import
         url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
       </style>
