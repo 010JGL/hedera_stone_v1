@@ -129,7 +129,7 @@ const NavbarNfts = (path) => {
         </div>
       </div>
       <div className="button-icon">
-        <Image src={bladewallet} width={160} height={100} alt="Login button" />
+        {/* <Image src={bladewallet} width={160} height={100} alt="Login button" /> */}
         <div className="button-wallet">
           <PairBlade />
           {connectedId ? (

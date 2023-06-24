@@ -7,21 +7,21 @@ import Form from "react-bootstrap/Form";
 
 export default function UploadForm() {
 
-  const [words, setWords] = useState("BedTableDoor");
-  const [firstname, setFirstname] = useState("John");
-  const [middlename, setMiddlename] = useState("Alex");
-  const [surname, setSurname] = useState("Wick");
-  const [datebirth, setDatebirth] = useState("1979-01-01");
-  const [datedied, setDatedied] = useState("2023-01-01");
-  const [country, setCountry] = useState("Mexico");
-  const [state, setState] = useState("Quintana Roo");
-  const [city, setCity] = useState("Cancun");
-  const [cemeteryname, setCemeteryname] = useState("St Marc");
+  const [words, setWords] = useState("");
+  const [firstname, setFirstname] = useState("");
+  const [middlename, setMiddlename] = useState("");
+  const [surname, setSurname] = useState("");
+  const [datebirth, setDatebirth] = useState("");
+  const [datedied, setDatedied] = useState("");
+  const [country, setCountry] = useState("");
+  const [state, setState] = useState("");
+  const [city, setCity] = useState("");
+  const [cemeteryname, setCemeteryname] = useState("");
   const [extras, setExtras] = useState(
-    "Extras... Extras... Extras... Extras..."
+    ""
   );
   const [iconUrl, setIconUrl] = useState(
-    "https://bafybeifwnxnd46atsixewshki75gzrt5ukkpss2533rtijtmiuiwzodhyy.ipfs.nftstorage.link/"
+    ""
   );
   //const [imageFile, SetImageFile] = useState("");
   const [metadata, setMetaData] = useState("");

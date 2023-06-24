@@ -28,8 +28,8 @@ export default function Nfts() {
   return (
     <main className="main">
       <div className="three-d-container">
-      <div className="home-display"></div>
-      <ThreeD_image></ThreeD_image>
+        <div className="home-display"></div>
+        <ThreeD_image></ThreeD_image>
       </div>
       <div className="video-box">
         <StrictMode>
@@ -55,11 +55,13 @@ export default function Nfts() {
       </div>
       <div className="middle-column-box">
         <div className="middle-column">
-          <p className="title-text">This is how it looks from your phone.</p>
+          <div className="middle-text">
+            This is how it looks from your phone.
+          </div>
           <div className="top-picture"></div>
         </div>
         <div className="middle-column">
-          <p className="title-text">You can even project it at home.</p>
+          <div className="middle-text">You can even project it at home.</div>
           <div className="bot-picture"></div>
         </div>
       </div>
@@ -67,11 +69,12 @@ export default function Nfts() {
         <Card
           isHoverable
           variant="bordered"
-          css={{ mw: "2000px", backgroundColor: "lightgray" }}
+          css={{ mw: "2000px", backgroundColor: "black" }}
         >
           <Card.Body>
-            <Text size={30} className="text-box">
-              HOW IT WORKS.<br></br> We have a huge community around the globe
+          <Text size={24} className="text-box" css={{ color: "white"}}>HOW IT WORKS</Text>
+            <Text size={24} className="text-box" css={{ color: "white"}}>
+              <br></br> We have a huge community around the globe
               whose passion is capturing images which we then turn into 3D
               models. If you would like to join that community and earn
               royalties from the models we create, then please leave your name
@@ -96,7 +99,7 @@ export default function Nfts() {
         </Card>
       </div>
       <div className="bottom-text">
-        In other parts of our site you will find:
+        In other parts of our site you will find:-
       </div>
       <div className="links-box">
         <div className="link-box">

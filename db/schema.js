@@ -18,8 +18,8 @@ import { sql } from "@vercel/postgres";
     cemeteryname VARCHAR(255) NOT NULL,
     extras VARCHAR(255) NOT NULL,
     iconUrl VARCHAR(255) NOT NULL,
-    tokenId VARCHAR(255) NOT NULL,
-    metadata VARCHAR(255) NOT NULL,
+    tokenId VARCHAR(255),
+    metadata VARCHAR(255),
     date TIMESTAMP
     );`;
 
