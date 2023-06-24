@@ -8,6 +8,11 @@ import { Card, Row, Button, Text, Table } from "@nextui-org/react";
 
 import PayBlade from "../../../components/buttons/pay/PayBlade";
 
+import Specific_3d from "../../../components/3d_image/specific_3d";
+import Specific_3d2 from "../../../components/3d_image/specific_3d2";
+import Specific_3d3 from "../../../components/3d_image/specific_3d3";
+import Specific_3d4 from "../../../components/3d_image/specific_3d4";
+
 export default function Specific() {
   const [words, setWords] = useState("");
   const [firstname, setFirstname] = useState("");
@@ -21,6 +26,7 @@ export default function Specific() {
   const [cemeteryname, setCemeteryname] = useState("");
   const [extras, setExtras] = useState("");
   const [iconUrl, setIconUrl] = useState("");
+  const [currentId, setCurrentId] = useState("");
 
   // gets the pathname in the URL to load the right page
   const path = usePathname();
@@ -28,6 +34,8 @@ export default function Specific() {
   const id = path.slice(14);
 
   const loadNft = async () => {
+    // for the 3d image
+    setCurrentId(id);
     // e.preventDefault();
 
     // validations
@@ -66,6 +74,12 @@ export default function Specific() {
   return (
     <main className="main">
       <h1 className="title">NFT specific page</h1>
+      {/* Will refactor to be dynamic with DB, just a testing and idea for now */}
+      {currentId == 1 && <Specific_3d></Specific_3d>}
+      {currentId == 2 && <Specific_3d2></Specific_3d2>}
+      {currentId == 3 && <Specific_3d3></Specific_3d3>}
+      {currentId == 4 && <Specific_3d4></Specific_3d4>}
+      <div className="three-d-container"></div>
       <div className="specific-card">
         <Card isPressable>
           <Card.Body css={{ p: 0 }}>

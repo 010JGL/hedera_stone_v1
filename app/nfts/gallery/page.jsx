@@ -6,8 +6,6 @@ import Link from "next/link";
 
 import { Card, Grid, Row, Text, Button, Col } from "@nextui-org/react";
 
-import Small_3d from "../../components/3d_image/threed_image";
-
 export default function Gallery() {
   const [words, setWords] = useState();
   const [firstname, setFirstname] = useState();
@@ -22,6 +20,13 @@ export default function Gallery() {
   const [extras, setExtras] = useState();
   const [iconUrl, setIconUrl] = useState();
   const [nftsList, setNftsList] = useState([{}, {}, {}, {}]);
+
+  const urlList = [
+    "https://bafkreie3luugc4yatvs7aznuet2kxakvlgbhgigwgzr5yge5fivjg6m6me.ipfs.nftstorage.link/",
+    "https://bafkreibcrzg6i5neuuvkm5hsfj2e7tscowc75cyacd3mqa7vc55vfdw3ba.ipfs.nftstorage.link/",
+    "https://bafkreihnmpzmei62ykjrzy4ch6vsvjnwcewv2rgz7nctiheaaewdy3mt5i.ipfs.nftstorage.link/",
+    "https://bafkreiceyq2luxzrszr5qvg5ycyp4cgyq6c7eelbtsostokr3degyptbza.ipfs.nftstorage.link/",
+  ];
 
   const loadGallery = async () => {
     // e.preventDefault();
@@ -62,15 +67,13 @@ export default function Gallery() {
   return (
     <main className="main">
       <h1 className="title">Gallery</h1>
-
       <div className="cards-container">
-        {/* gap doesnt work, cant add paddin either??? wtf */}
+        <Text size={16} weight="bold" transform="uppercase" color="white">
+          Example 2D images
+        </Text>
         <Grid.Container gap={2} justify="flex-start">
           {nftsList.map((item, index) => (
             <Grid xs={6} sm={3} key={index}>
-              <Text size={16} weight="bold" transform="uppercase" color="white">
-                Example 2D images
-              </Text>
               <Link href={`/nfts/gallery/${item.id}`}>
                 <Card isPressable>
                   <Card.Body css={{ p: 0 }}>
@@ -98,10 +101,31 @@ export default function Gallery() {
                   </Card.Footer>
                 </Card>
               </Link>
+            </Grid>
+          ))}
+        </Grid.Container>
+      </div>
+      {/* Data to be incorporated in DB and displayed dynamicly in the future */}
+      <div className="cards-container">
+        <Grid.Container gap={2} justify="flex-start">
+          {urlList.map((item, index) => (
+            <Grid xs={6} sm={3} key={index}>
               <Text size={16} weight="bold" transform="uppercase" color="white">
                 Click on 2D image for 3D model
               </Text>
-                {/* <Small_3d></Small_3d> */}
+              <Link href={`/nfts/gallery/${index + 1}`}>
+                <Card isPressable>
+                  <Card.Body css={{ p: 0 }}>
+                    <Card.Image
+                      src={item}
+                      objectFit="cover"
+                      width="100%"
+                      height="280px"
+                      alt="3D model"
+                    />
+                  </Card.Body>
+                </Card>
+              </Link>
             </Grid>
           ))}
         </Grid.Container>
