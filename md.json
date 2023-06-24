@@ -1,0 +1,26 @@
+{
+  "name": "Grave 17",
+  "creator": "Jay Cool",
+  "description": "A grave",
+  "image": "ipfs://bafybeic6xxnhht6giq6qrtt4k6qfen34ehiiwh32lqicnxuw4utxkwoenm",
+  "type": "image/jpg",
+  "files": [
+    {
+      "uri": "ipfs://bafybeiajpv3nsfr6tajdcptzhcv7wkedlggyp5sru5emciidngw7nbeguy",
+      "type": "model/gltf-binary"
+    }
+  ],
+  "properties": {
+    "tags": "grave,headstone,family"
+  },
+  "attributes": [
+    {
+      "trait_type": "Release Date",
+      "value": "2022"
+    },
+    {
+      "trait_type": "Release Type",
+      "value": "Combo"
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import {
@@ -6,13 +8,15 @@ import {
 } from "../../../context/walletContext";
 
 const PairBlade = () => {
-  const { connectBlade } = React.useContext(WalletContext) as WalletSignerType;
+  const { connectBlade, connectedId, disconnect } = React.useContext(
+    WalletContext
+  ) as WalletSignerType;
 
   return (
     <button
       style={{ display: "inline-block" }}
       className="pe-5 btn-main  me-3"
-      onClick={connectBlade}
+      onClick={connectedId ? disconnect : connectBlade}
     >
       <Image
         height="30"
@@ -21,7 +25,7 @@ const PairBlade = () => {
         src="/images/bladewallet.png"
         alt="Blade GoMusic Icon"
       />
-      <span>Blade</span>sa
+      <span>{connectedId ? `Disconnect` : `Connect`}</span>
     </button>
   );
 };

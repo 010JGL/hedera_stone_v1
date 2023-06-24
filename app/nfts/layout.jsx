@@ -12,11 +12,9 @@ export default function NftsLayout({ children }) {
 
   return (
     <section>
-      <WalletProvider>
-        <NavbarNfts props={path}></NavbarNfts>
-        {children}
-        <Footer></Footer>
-      </WalletProvider>
+      <NavbarNfts props={path}></NavbarNfts>
+      {children}
+      <Footer></Footer>
     </section>
   );
 }
