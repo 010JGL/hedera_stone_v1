@@ -75,11 +75,7 @@ export async function POST(request) {
     );
   console.log(`newUpload`, newUpload);
 
-  if (success) {
-    // create a new NFT
-  }
-
-  const sendData = { ...res, success };
+  const sendData = { ...res, success, tokenId };
 
   return NextResponse.json(sendData);
 }

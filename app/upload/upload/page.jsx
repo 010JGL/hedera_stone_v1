@@ -48,13 +48,15 @@ export default function UploadForm() {
         cemeteryname,
         extras,
         iconUrl,
-        metadata,
-        tokenId
+        metadata
       }),
     });
 
     const data3 = await res.json();
+    
     console.log(data3);
+    // if success alert / toast
+    // use state for toast
   };
 
   return (
