@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 
-export const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
 
@@ -46,12 +46,12 @@ export const handleSubmit = async (e) => {
   const data2 = await res.json();
   //console.log(`data2:`, data2);
   // checks if object empty
-  if (Object.keys(data2).length < 1) {
-    alert(`Wrong password`);
-  } else {
-    // login logic here
-    alert(`Login success`)
-    return data2
-  }
+  // if (Object.keys(data2).length < 1) {
+  //   alert(`Wrong password`);
+  // } else {
+  //   // login logic here
+  //   alert(`Login success`)
+  //   return data2
+  // }
   
 };

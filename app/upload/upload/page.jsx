@@ -49,6 +49,7 @@ export default function UploadForm() {
         extras,
         iconUrl,
         metadata,
+        tokenId
       }),
     });
 

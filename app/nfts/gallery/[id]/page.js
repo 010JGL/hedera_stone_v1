@@ -27,6 +27,7 @@ export default function Specific() {
   const [extras, setExtras] = useState("");
   const [iconUrl, setIconUrl] = useState("");
   const [currentId, setCurrentId] = useState("");
+  const [tokenId, setTokenId] = useState("");
 
   // gets the pathname in the URL to load the right page
   const path = usePathname();
@@ -65,6 +66,7 @@ export default function Specific() {
     setExtras(results.extras);
     setWords(results.words);
     setIconUrl(results.iconurl);
+    setTokenId(results.tokenId)
   };
 
   useEffect(() => {
@@ -106,7 +108,8 @@ export default function Specific() {
               <Button flat auto rounded color="primary">
                 {/* THIS IS WHERE YOU PASS IN THE TOKEN ID DYNAMICALLY */}
                 {/* BASED ON THE DATA COMING FROM DB */}
-                <PayBlade tokenId={"0.0.14972996"} />
+                {/* tokenId={"0.0.14972996"} */}
+                <PayBlade tokenId={tokenId} />
 
                 {/* <Text
                   css={{ color: "inherit" }}
