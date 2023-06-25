@@ -80,7 +80,7 @@ export default function Specific() {
       {currentId == 1 && <Specific_3d4></Specific_3d4>}
       {currentId == 2 && <Specific_3d2></Specific_3d2>}
       {currentId == 3 && <Specific_3d></Specific_3d>}
-      {currentId == 4 && <Specific_3d4></Specific_3d4>}
+      {currentId == 4 && <Specific_3d3></Specific_3d3>}
       <div className="three-d-container"></div>
       <div className="specific-card">
         <Card isPressable>
