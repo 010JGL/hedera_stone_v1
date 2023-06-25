@@ -77,9 +77,9 @@ export default function Specific() {
     <main className="main">
       <h1 className="title">NFT specific page</h1>
       {/* Will refactor to be dynamic with DB, just a testing and idea for now */}
-      {currentId == 1 && <Specific_3d></Specific_3d>}
+      {currentId == 1 && <Specific_3d4></Specific_3d4>}
       {currentId == 2 && <Specific_3d2></Specific_3d2>}
-      {currentId == 3 && <Specific_3d3></Specific_3d3>}
+      {currentId == 3 && <Specific_3d></Specific_3d>}
       {currentId == 4 && <Specific_3d4></Specific_3d4>}
       <div className="three-d-container"></div>
       <div className="specific-card">
