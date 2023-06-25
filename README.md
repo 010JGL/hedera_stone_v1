@@ -1,5 +1,7 @@
 ### Hedera Stone
 
+https://hedera-stone-v1-tau.vercel.app/
+
 Our project has one clear aim; to onboard, to Hedera, just some of the 200 million people who regularly spend their leisure hours researching their family tree. (Actually, we want ALL of them).
 
 How will we do this? In three dimensions. NOBODY else is doing this.
@@ -32,8 +34,6 @@ HederaStone is predicated upon 2D and 3D imagery of headstones, minted as an NFT
 
 Next.js, React, PostgresQL (serverless vercel)
 
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -68,7 +68,12 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-### Commands to run ###
+
+### Commands to run for devs ###
+### `npm i`
+
+
+# Full list
 
 Run `npm install @vercel/postgres` for vercel
 
@@ -133,8 +138,6 @@ Run `npm install --save react-native-video`
 
 - Cant use the DROP TABLE or seeds for DB, gotta use Vercel website
 
-- Make components to show that we have signed up and loggin 
-
 - Change the naming of links / folder so it doesnt confuse in the URL
 
 - Testing the API 
@@ -143,6 +146,12 @@ Run `npm install --save react-native-video`
 
 - Make the homepage form collect the information on DB
 
+- Add confirmation for the user when we buy, we can see the image in the wallet but needs a pop up.
+
+- Validations for the forms
+
+- Write more tests 
+
 ### Future to do list
 
 - Login feature
@@ -150,13 +159,30 @@ Run `npm install --save react-native-video`
 - Collection page
 
 
-
-
 ----- notes ----
 
 -3d image loading time           PRELOAD IT
 -Login feature, use bcrypt? yes
 
+
+###### Judges ######
+
+
+# Api call to buy
+app/api/buy/route.js
+
+# Blade wallet integration 
+app/hashgraph/wallets/
+pairing is in 
+app/components/buttons/pairWallet
+
+# Component Payblade
+app/components/buttons/pay/PayBlade.tsx
+is called in the 
+app/components/navbar_nft
+
+# Wallet helpers 
+app/context/walletContext.tsx
 
 
 
