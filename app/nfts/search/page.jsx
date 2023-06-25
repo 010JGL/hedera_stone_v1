@@ -42,7 +42,7 @@ export default function Search() {
   if (data3.length < 1) {
     return (
       <main className="main">
-        <h1 className="title">Search Form</h1>
+        <h1 className="title">Search Form DEMO ONLY PLS TYPE: <br></br>'Eamon' 'Flynn' '11-4-1986' '19-4-2018'</h1>
         <div className="form-container">
           <Form>
             <Form.Group className="mb-3" controlId="formBasicW3w">
