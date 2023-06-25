@@ -22,10 +22,11 @@ export default function Gallery() {
   const [nftsList, setNftsList] = useState([{}, {}, {}, {}]);
 
   const urlList = [
+    "https://bafkreiceyq2luxzrszr5qvg5ycyp4cgyq6c7eelbtsostokr3degyptbza.ipfs.nftstorage.link/",
     "https://bafkreie3luugc4yatvs7aznuet2kxakvlgbhgigwgzr5yge5fivjg6m6me.ipfs.nftstorage.link/",
     "https://bafkreibcrzg6i5neuuvkm5hsfj2e7tscowc75cyacd3mqa7vc55vfdw3ba.ipfs.nftstorage.link/",
     "https://bafkreihnmpzmei62ykjrzy4ch6vsvjnwcewv2rgz7nctiheaaewdy3mt5i.ipfs.nftstorage.link/",
-    "https://bafkreiceyq2luxzrszr5qvg5ycyp4cgyq6c7eelbtsostokr3degyptbza.ipfs.nftstorage.link/",
+    
   ];
 
   const loadGallery = async () => {
