@@ -186,8 +186,9 @@ a:active {
   width: 30%;
 }
 .specific-card {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  width: 100%;
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
 .info-container {
   display: flex;

@@ -127,7 +127,7 @@ export default function Gallery() {
                       src={item}
                       objectFit="cover"
                       width="100%"
-                      height="280px"
+                      height="340px"
                       alt="3D model"
                     />
                   </Card.Body>
