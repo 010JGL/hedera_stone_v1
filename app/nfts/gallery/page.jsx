@@ -118,13 +118,57 @@ export default function Gallery() {
       {/* Data to be incorporated in DB and displayed dynamicly in the future */}
       <div className="cards-container">
         <Grid.Container gap={2} justify="flex-start">
-          {urlList.map((item, index) => (
-            <Grid xs={6} sm={3} key={index}>
-              <Link href={`/nfts/gallery/${index + 1}`}>
+            <Grid xs={6} sm={3} key="3">
+              <Link href={`/nfts/gallery/1`}>
                 <Card isPressable>
                   <Card.Body css={{ p: 0 }}>
                     <Card.Image
-                      src={item}
+                      src="https://bafkreiceyq2luxzrszr5qvg5ycyp4cgyq6c7eelbtsostokr3degyptbza.ipfs.nftstorage.link/"
+                      objectFit="cover"
+                      width="100%"
+                      height="340px"
+                      alt="3D model"
+                    />
+                  </Card.Body>
+                </Card>
+              </Link>
+              </Grid>
+              <Grid xs={6} sm={3} key="3">
+              <Link href={`/nfts/gallery/3`}>
+                <Card isPressable>
+                  <Card.Body css={{ p: 0 }}>
+                    <Card.Image
+                      src="https://bafkreie3luugc4yatvs7aznuet2kxakvlgbhgigwgzr5yge5fivjg6m6me.ipfs.nftstorage.link/"
+                      objectFit="cover"
+                      width="100%"
+                      height="340px"
+                      alt="3D model"
+                    />
+                  </Card.Body>
+                </Card>
+              </Link>
+              </Grid>
+              <Grid xs={6} sm={3} key="3">
+              <Link href={`/nfts/gallery/2`}>
+                <Card isPressable>
+                  <Card.Body css={{ p: 0 }}>
+                    <Card.Image
+                      src="https://bafkreibcrzg6i5neuuvkm5hsfj2e7tscowc75cyacd3mqa7vc55vfdw3ba.ipfs.nftstorage.link/"
+                      objectFit="cover"
+                      width="100%"
+                      height="340px"
+                      alt="3D model"
+                    />
+                  </Card.Body>
+                </Card>
+              </Link>
+              </Grid>
+              <Grid xs={6} sm={3} key="3">
+              <Link href={`/nfts/gallery/4`}>
+                <Card isPressable>
+                  <Card.Body css={{ p: 0 }}>
+                    <Card.Image
+                      src="https://bafkreihnmpzmei62ykjrzy4ch6vsvjnwcewv2rgz7nctiheaaewdy3mt5i.ipfs.nftstorage.link/"
                       objectFit="cover"
                       width="100%"
                       height="340px"
@@ -134,7 +178,6 @@ export default function Gallery() {
                 </Card>
               </Link>
             </Grid>
-          ))}
         </Grid.Container>
       </div>
     </main>
