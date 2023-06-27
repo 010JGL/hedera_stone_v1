@@ -33,9 +33,20 @@ a:active {
   justify-content: flex-end;
 }
 .nav-message {
-  font-size: small;
+  font-size: 19px;
   color: lightgrey;
   font-style: italic;
+  width: 300px;
+}
+.nav-message-homepage {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 19px;
+  color: lightgrey;
+  font-style: italic;
+  width: 300px;
+  align-self: center;
 }
 .nav-container {
   display: flex;
@@ -45,12 +56,17 @@ a:active {
 .nav-logo {
   padding-top: 30px;
 }
+.nav-logo-homepage {
+  display: flex;
+  justify-content: center;
+}
 .nav-title {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding-left: 30px;
   padding-top: 30px;
+  width: 500px;
 }
 .button-box {
   display: flex;

@@ -10,13 +10,19 @@ export default function Home() {
   return (
     <NextUIProvider>
       <main className="homepage">
-      <ul className="nav-container">
-      <div className="nav-logo">
-        <Link href="/">
-          <Image src={logo} width={100} height={100} alt="HederaStone Logo" />
-        </Link>
-      </div>
-      </ul>
+        <ul className="nav-container">
+          <div className="nav-logo-homepage">
+            <Link href="/">
+              <Image
+                src={logo}
+                width={100}
+                height={100}
+                alt="HederaStone Logo"
+              />
+            </Link>
+            <div className="nav-message-homepage">The 3D Family Tree of the Future</div>
+          </div>
+        </ul>
         <h1 className="title">HederaStone Temporary Page</h1>
         <div className="intro">
           Click here to experience the first draft CTE website.
